@@ -12,6 +12,8 @@
     "node": ">=20.0.0"
   },
   "scripts": {
+    "prepare": "husky",
+    "commitlint": "commitlint --edit",
     "test": "jest",
     "dev": "next dev",
     "build": "next build",
@@ -29,6 +31,10 @@
     "@babel/preset-env": "^7.25.4",
     "@babel/preset-react": "^7.24.7",
     "@babel/preset-typescript": "^7.24.7",
+    "@commitlint/cli": "^19.4.1",
+    "@commitlint/config-conventional": "^19.4.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@storybook/addon-a11y": "^8.2.9",
     "@storybook/addon-essentials": "^8.2.9",
     "@storybook/addon-interactions": "^8.2.9",
@@ -45,11 +51,13 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.7",
     "eslint-plugin-storybook": "^0.8.0",
+    "husky": "^9.1.5",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "prettier": "^3.3.3",
     "sass": "^1.78.0",
+    "semantic-release": "^24.1.0",
     "storybook": "^8.2.9",
     "typescript": "^5"
   },
@@ -71,5 +79,33 @@
       "^@/(.*)$": "<rootDir>/src/$1",
       "\\.(css|scss)$": "identity-obj-proxy"
     }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "package-lock.json",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ],
+      "@semantic-release/github"
+    ]
   }
 }
