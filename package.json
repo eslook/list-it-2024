@@ -74,5 +74,10 @@
       "^@/(.*)$": "<rootDir>/src/$1",
       "\\.(css|scss)$": "identity-obj-proxy"
     }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
