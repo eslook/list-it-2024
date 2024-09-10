@@ -1,7 +1,13 @@
 {
   "name": "list-it-2024",
   "version": "0.1.0",
+  "description": "List it: products, wishes, we got 'em.",
+  "author": "Charlotte Gieltjes",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eslook/list-it-2024"
+  },
   "engines": {
     "node": ">=20.0.0"
   },
