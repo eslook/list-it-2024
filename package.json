@@ -12,7 +12,7 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "prepare": "husky",
+    "prepare": "node .husky/install.mjs",
     "commitlint": "commitlint --edit",
     "test": "jest",
     "dev": "next dev",
