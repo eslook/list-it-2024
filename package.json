@@ -76,6 +76,7 @@
       ]
     },
     "moduleNameMapper": {
+      "^next/font/local$": "<rootDir>/__mocks__/mockNextLocalFont.ts",
       "^@/(.*)$": "<rootDir>/src/$1",
       "\\.(css|scss)$": "identity-obj-proxy"
     }
