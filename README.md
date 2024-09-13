@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Welcome to List It 2024! This project is built with React, Next.js and TypeScript, testing is done using Jest and it comes with a Storybook app and a JSON server. It is deployed with Vercel.
 
 ## Getting Started
 
-First, run the development server:
+To run the development server, use:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+After running the server, open [http://localhost:3000](http://localhost:3000) in your browser to see the Next.js app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+It also comes with a Storybook app, to run it, use:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run storybook
+```
 
-## Learn More
+Afterwards, open [http://localhost:6006](http://localhost:6006) in your browser to see the Storybook app.
 
-To learn more about Next.js, take a look at the following resources:
+The project uses a [json-server](https://www.npmjs.com/package/json-server), from within the `api` folder. To run it, use:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+cd api
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Afterwards, open [http://localhost:8080](http://localhost:8080) in your browser to see the JSON server.
+
+Since `json-server` is in beta, we're using the stable v0. View stable v0 documentation [here](https://github.com/typicode/json-server/tree/v0).
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deploy the Next.js project to Vercel using the Framework Preset for `Next.js`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deploy the `api` to Vercel using the Framework Preset for`Other`, set `Root Directory` to `./api` and set `Include files outside the root directory in the Build Step.` to `Disabled`.
+
+See [Vercel](https://vercel.com/docs/deployments/overview) for the latest documentation.
