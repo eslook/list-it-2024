@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/eslook/list-it-2024/compare/v1.0.0...v1.0.1) (2024-09-13)
+
+
+### Bug Fixes
+
+* **json-server:** set vercel settings relative to api root ([14bcd02](https://github.com/eslook/list-it-2024/commit/14bcd027fb75dfc495fb1bb77350be479cf4a538))
+
 # 1.0.0 (2024-09-11)
 
 
