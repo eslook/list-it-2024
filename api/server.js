@@ -23,8 +23,8 @@ server.use(middlewares);
 // jsonServer.rewriter({})
 // );
 server.use(router);
-server.listen(3000, () => {
-  console.log('JSON Server is running on http://localhost:3000');
+server.listen(8080, () => {
+  console.log('JSON Server is running on http://localhost:8080');
 });
 
 // Export the Server API
