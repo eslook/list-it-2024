@@ -1,7 +1,8 @@
 {
   "meta": {
     "title": "List It",
-    "description": "List it: items, lists, we got 'em."
+    "description": "List it: items, lists, we got 'em.",
+    "opengraph": "List It"
   },
   "page": {
     "items": {
