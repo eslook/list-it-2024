@@ -1,3 +1,16 @@
+# [1.5.0](https://github.com/eslook/list-it-2024/compare/v1.4.0...v1.5.0) (2024-09-14)
+
+
+### Bug Fixes
+
+* api package script should reference correct directory ([5e37e66](https://github.com/eslook/list-it-2024/commit/5e37e668fff453f206379ad4169b3ede4a77f67a))
+
+
+### Features
+
+* display information on item overview ([de2cd02](https://github.com/eslook/list-it-2024/commit/de2cd024e1d356e31130c37dbdab08de5b16ca8b))
+* manage item in list on item overview ([87a774d](https://github.com/eslook/list-it-2024/commit/87a774d5e792d05b10ba80818f8e6b5d8c86d653))
+
 # [1.4.0](https://github.com/eslook/list-it-2024/compare/v1.3.0...v1.4.0) (2024-09-14)
 
 
