@@ -10,6 +10,8 @@
     },
     "item": {
       "title": "Item",
+      "addToList": "Add item to list",
+      "removeFromList": "Remove item from list",
       "specifications": {
         "title": "Specifications",
         "processor": "Processor",
@@ -23,7 +25,9 @@
         "label": "Name new list",
         "placeholder": "New list",
         "button": "Create list"
-      }
+      },
+      "deleteList": "Delete list",
+      "removeItemFromList": "Remove item from list"
     },
     "list": {
       "title": "List"

@@ -48,7 +48,7 @@ const ItemOverview: React.FC<ItemOverviewProps> = ({
                   listId: list.id,
                 })
               }>
-              Add item to list
+              {t('addToList')}
             </button>
             <button
               disabled={!list.products.includes(item.id)}
@@ -57,7 +57,7 @@ const ItemOverview: React.FC<ItemOverviewProps> = ({
                   listId: list.id,
                 })
               }>
-              Remove item from list
+              {t('removeFromList')}
             </button>
           </li>
         ))}

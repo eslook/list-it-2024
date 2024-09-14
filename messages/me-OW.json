@@ -10,6 +10,8 @@
     },
     "item": {
       "title": "Meow",
+      "addToList": "Meow :)",
+      "removeFromList": "Meow :(",
       "specifications": {
         "title": "Meow",
         "processor": "Meow",
@@ -23,7 +25,9 @@
         "label": "Meow meow",
         "placeholder": "Meow",
         "button": "Meow"
-      }
+      },
+      "deleteList": "Meow >:(",
+      "removeItemFromList": "Meow :("
     },
     "list": {
       "title": "Meow"
