@@ -1,42 +1,46 @@
 {
+  "meta": {
+    "title": "Lisssst It",
+    "description": "Lisssst it: mewtems, lissssts, we got meow'm."
+  },
   "page": {
     "items": {
-      "title": "Meow",
-      "description": "Meow",
+      "title": "Home (Cat Den)",
+      "description": "Welcome to the cat den",
       "search": {
-        "label": "Meow meow",
-        "placeholder": "Meow meow..."
+        "label": "Search fur items",
+        "placeholder": "Enter a meowword..."
       }
     },
     "item": {
-      "title": "Meow",
-      "addToList": "Meow :)",
-      "removeFromList": "Meow :(",
+      "title": "Mewtem",
+      "addToList": "Add mewtem to lisssst",
+      "removeFromList": "Remove mewtem from lisssst",
       "specifications": {
-        "title": "Meow",
-        "processor": "Meow",
-        "ram": "Meow",
-        "storage": "Meow"
+        "title": "Purr-specifications",
+        "processor": "Purr-cessor",
+        "ram": "Cat-nap Memory (RAM)",
+        "storage": "Claw-sit (Storage)"
       }
     },
     "lists": {
-      "title": "Meow",
+      "title": "Lissssts",
       "create": {
-        "label": "Meow meow",
-        "placeholder": "Meow",
-        "button": "Meow"
+        "label": "Name new lisssst",
+        "placeholder": "New lisssst",
+        "button": "Create lisssst"
       },
-      "deleteList": "Meow >:(",
-      "removeItemFromList": "Meow :("
+      "deleteList": "De-claw lisssst",
+      "removeItemFromList": "Remove mewtem from lisssst"
     },
     "list": {
-      "title": "Meow"
+      "title": "Lisssst"
     },
     "notFound": {
-      "title": "Meow"
+      "title": "Not meow-nd"
     },
     "loading": {
-      "title": "Meow..."
+      "title": "Paw-cessing..."
     }
   }
 }
