@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/eslook/list-it-2024/compare/v1.0.1...v1.1.0) (2024-09-14)
+
+
+### Features
+
+* add internalization with one supported locale ([6a97a29](https://github.com/eslook/list-it-2024/commit/6a97a29b6755fe8d412b55310748e3c742dd60d6))
+* add next/intl for app router with i18n routing ([60fb3fb](https://github.com/eslook/list-it-2024/commit/60fb3fb211e70ea2c54356a9f8d064ea855d1b1d))
+
 ## [1.0.1](https://github.com/eslook/list-it-2024/compare/v1.0.0...v1.0.1) (2024-09-13)
 
 
