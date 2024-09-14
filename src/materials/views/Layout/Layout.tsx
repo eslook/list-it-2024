@@ -1,18 +1,7 @@
 import React from 'react';
 import styles from './layout.module.scss';
-import localFont from 'next/font/local';
+import { darkerGrotesqueClassName } from '@/utils/googleFontClassNames';
 import { Link } from '@/i18n/routing';
-
-const geistSans = localFont({
-  src: '../../../app/fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
-});
-const geistMono = localFont({
-  src: '../../../app/fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
-});
 
 interface LayoutProps {
   /**
@@ -23,10 +12,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div
-      className={[styles.layout, geistSans.variable, geistMono.variable].join(
-        ' '
-      )}>
+    <div className={[styles.layout, darkerGrotesqueClassName].join(' ')}>
       <main id="main-content" className={styles.main}>
         <Link href="/" locale="me-OW">
           Switch to Cat
