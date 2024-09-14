@@ -36,7 +36,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </Link>
         <Link href="/item/1">Switch to Detail 1</Link>
         <Link href="/lists">Switch to Lists</Link>
-        <Link href="/list/1">Switch to List 1</Link>
+
         <noscript>
           <p>
             This website works best with JavaScript enabled. Here&apos;s a{' '}
