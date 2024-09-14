@@ -9,7 +9,13 @@
       }
     },
     "item": {
-      "title": "Meow"
+      "title": "Meow",
+      "specifications": {
+        "title": "Meow",
+        "processor": "Meow",
+        "ram": "Meow",
+        "storage": "Meow"
+      }
     },
     "lists": {
       "title": "Meow",

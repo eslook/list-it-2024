@@ -9,7 +9,13 @@
       }
     },
     "item": {
-      "title": "Item"
+      "title": "Item",
+      "specifications": {
+        "title": "Specifications",
+        "processor": "Processor",
+        "ram": "RAM",
+        "storage": "Storage"
+      }
     },
     "lists": {
       "title": "Lists",
