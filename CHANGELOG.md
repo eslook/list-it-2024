@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/eslook/list-it-2024/compare/v1.2.0...v1.3.0) (2024-09-14)
+
+
+### Features
+
+* add debounced search on items ([48277ee](https://github.com/eslook/list-it-2024/commit/48277ee8d1f86a78c160fc93f4e7f45507495a96))
+
 # [1.2.0](https://github.com/eslook/list-it-2024/compare/v1.1.0...v1.2.0) (2024-09-14)
 
 
