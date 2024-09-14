@@ -16,12 +16,11 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }) {
-  // const t = await getTranslations({locale, namespace: 'Metadata'});
-  const t = await getTranslations({ locale });
+  const t = await getTranslations({ locale, namespace: 'meta' });
 
   return {
-    title: t('page.items.title'),
-    description: t('page.items.title'),
+    title: t('title'),
+    description: t('description'),
   };
 }
 
