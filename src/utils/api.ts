@@ -1,3 +1,8 @@
+const HOST =
+  process.env.NODE_ENV.toLowerCase() === 'development'
+    ? 'http://localhost:8080/'
+    : 'https://list-it-api-2024.vercel.app/';
+
 /**
  * Make call to the API, with specified endpoint, method and body.
  *
@@ -19,7 +24,7 @@ const makeCall = async ({
   method: string;
   body: object | null;
 }) => {
-  const url = `https://list-it-api-2024.vercel.app/${endpoint}`;
+  const url = `${HOST}${endpoint}`;
   const response = await fetch(url, {
     method,
     body: body && JSON.stringify(body),
