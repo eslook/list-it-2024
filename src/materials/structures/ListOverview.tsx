@@ -2,7 +2,7 @@ import { use } from 'react';
 import { useTranslations } from 'next-intl';
 
 interface ListOverviewProps {
-  listPromise: Promise<ApiProduct>;
+  listPromise: Promise<ApiWishlist>;
 }
 
 const ListOverview: React.FC<ListOverviewProps> = ({ listPromise }) => {

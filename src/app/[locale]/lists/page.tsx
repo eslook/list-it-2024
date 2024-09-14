@@ -1,14 +1,7 @@
 import React from 'react';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { ListsOverview } from '@/materials/structures/ListsOverview';
-
-const fetchItems = async () => {
-  const response = await fetch('https://list-it-api-2024.vercel.app/wishlists');
-  if (!response.ok) {
-    throw new Error('Failed to fetch items');
-  }
-  return response.json();
-};
+import { getLists } from '@/utils/api';
 
 export default async function Page({
   params: { locale },
@@ -16,7 +9,7 @@ export default async function Page({
   params: { locale: string };
 }) {
   unstable_setRequestLocale(locale);
-  const listsPromise = fetchItems();
+  const listsPromise = getLists();
 
   return <ListsOverview listsPromise={listsPromise} />;
 }
