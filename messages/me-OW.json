@@ -12,7 +12,11 @@
       "title": "Meow"
     },
     "lists": {
-      "title": "Meow"
+      "title": "Meow",
+      "create": {
+        "label": "Meow meow",
+        "placeholder": "Meow"
+      }
     },
     "list": {
       "title": "Meow"

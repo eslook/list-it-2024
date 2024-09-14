@@ -12,7 +12,11 @@
       "title": "Item"
     },
     "lists": {
-      "title": "Lists"
+      "title": "Lists",
+      "create": {
+        "label": "Name new list",
+        "placeholder": "New list"
+      }
     },
     "list": {
       "title": "List"
