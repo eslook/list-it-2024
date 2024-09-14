@@ -36,3 +36,43 @@ Deploy the Next.js project to Vercel using the Framework Preset for `Next.js`.
 Deploy the `api` to Vercel using the Framework Preset for`Other`, set `Root Directory` to `./api` and set `Include files outside the root directory in the Build Step.` to `Disabled`.
 
 See [Vercel](https://vercel.com/docs/deployments/overview) for the latest documentation.
+
+## Changelog
+
+See the `CHANGELOG.md` in the root of the project for changes between automated releases of the package.
+
+Features have been roughly added in the following order:
+
+- nextjs with typescript in expected file structure
+- formatters and linters
+- unit testing with jest
+- storybook
+- husky hooks
+- github pipelines
+- routing
+- json server
+- localization
+- data fetching
+- search on items
+- post, put and delete of lists
+- manage item in list on item overview
+- stale while revalidating on lists
+- localize pathnames
+- localized meta, opengraph image, etc
+
+## Roadmap
+
+The following materials are on the roadmap:
+
+- image material to wrap the next/image and handle settings based on url
+- link material to wrap next/link to handle any additional features or styling
+- icon material with predefined icons from library
+- ...
+
+The following features are on the roadmap:
+
+- overall design
+- theme switcher to switch between different visual themes of the app
+- login feature
+- merge user's logged out wishlists with logged in wishlists when logging in
+- ...

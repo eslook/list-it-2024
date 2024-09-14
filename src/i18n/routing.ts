@@ -7,6 +7,20 @@ export const routing = defineRouting({
 
   // Used when no locale matches
   defaultLocale: 'en-US',
+
+  // The `pathnames` object holds pairs of internal and
+  // external paths. Based on the locale, the external
+  // paths are rewritten to the shared, internal ones.
+  pathnames: {
+    '/lists': {
+      'en-US': '/lists',
+      'me-OW': '/lissssts', // Because cats
+    },
+    '/item/[id]': {
+      'en-US': '/item/[id]',
+      'me-OW': '/mewtem/[id]', // Because cats
+    },
+  },
 });
 
 // Lightweight wrappers around Next.js' navigation APIs

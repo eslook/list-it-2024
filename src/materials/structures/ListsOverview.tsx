@@ -71,7 +71,7 @@ const ListsOverview: React.FC<ListsOverviewProps> = ({ initialLists }) => {
             <li key={list.id}>
               {list.name}
               <button onClick={() => handleDeleteList(list.id)}>
-                Delete list
+                {t('deleteList')}
               </button>
               <ul>
                 {list.products.map((itemId: number) => (
@@ -84,7 +84,7 @@ const ListsOverview: React.FC<ListsOverviewProps> = ({ initialLists }) => {
                           listId: list.id,
                         })
                       }>
-                      Remove item
+                      {t('removeItemFromList')}
                     </button>
                   </li>
                 ))}

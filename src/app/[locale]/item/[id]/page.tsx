@@ -2,6 +2,27 @@ import React from 'react';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { ItemOverview } from '@/materials/structures/ItemOverview';
 import { getItem, getLists } from '@/utils/api';
+import { Metadata, ResolvingMetadata } from 'next';
+
+export async function generateMetadata(
+  {
+    params,
+  }: {
+    params: { id: string };
+  },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const item = await getItem(Number(params.id));
+  const parentTitle = (await parent).title?.absolute;
+  const titles = [item.name, parentTitle].filter(Boolean);
+
+  return {
+    title: titles.join(' | '),
+    openGraph: {
+      images: [item.image],
+    },
+  };
+}
 
 export default async function Page({
   params: { locale, id },
