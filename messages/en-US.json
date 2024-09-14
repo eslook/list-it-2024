@@ -2,7 +2,11 @@
   "page": {
     "items": {
       "title": "Home",
-      "description": "Welcome to the home page"
+      "description": "Welcome to the home page",
+      "search": {
+        "label": "Search items",
+        "placeholder": "Enter a keyword..."
+      }
     },
     "item": {
       "title": "Item"
