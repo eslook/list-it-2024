@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/eslook/list-it-2024/compare/v1.1.0...v1.2.0) (2024-09-14)
+
+
+### Features
+
+* get data for items, item, lists and list ([47dc2c6](https://github.com/eslook/list-it-2024/commit/47dc2c6feea468e7ada7a37b6c3b33c07994ec89))
+
 # [1.1.0](https://github.com/eslook/list-it-2024/compare/v1.0.1...v1.1.0) (2024-09-14)
 
 
