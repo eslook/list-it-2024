@@ -57,6 +57,7 @@ Features have been roughly added in the following order:
 - post, put and delete of lists
 - manage item in list on item overview
 - stale while revalidating on lists
+- localize pathnames
 
 ## Roadmap
 
