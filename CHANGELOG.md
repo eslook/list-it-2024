@@ -1,3 +1,13 @@
+# [1.7.0](https://github.com/eslook/list-it-2024/compare/v1.6.0...v1.7.0) (2024-09-14)
+
+
+### Features
+
+* add localized opengraph image ([d909e27](https://github.com/eslook/list-it-2024/commit/d909e27ba11e0700cc45024f68cdd9224cc2fade))
+* localized item detail metadata based on self and parent ([870fb8a](https://github.com/eslook/list-it-2024/commit/870fb8a143139bbe48736c4407dc4ede01a51c66))
+* localized lists metadata based on self and parent ([9deb6f0](https://github.com/eslook/list-it-2024/commit/9deb6f0a2926c68725004cb42b58cefa595afa96))
+* use localized pathnames for fun ([cbba981](https://github.com/eslook/list-it-2024/commit/cbba981b98eca4f23873893ceee3a146d17cf4f5))
+
 # [1.6.0](https://github.com/eslook/list-it-2024/compare/v1.5.0...v1.6.0) (2024-09-14)
 
 
