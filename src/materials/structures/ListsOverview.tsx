@@ -1,6 +1,7 @@
 'use client';
 
-import { use, useCallback, useState } from 'react';
+import { useState } from 'react';
+import useSWR from 'swr';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import {
@@ -9,33 +10,32 @@ import {
   deleteList,
   removeItemFromList,
 } from '@/utils/api';
+
 interface ListsOverviewProps {
-  listsPromise: Promise<ApiWishlist[]>;
+  initialLists: ApiWishlist[];
 }
 
-const ListsOverview: React.FC<ListsOverviewProps> = ({ listsPromise }) => {
+const ListsOverview: React.FC<ListsOverviewProps> = ({ initialLists }) => {
   const t = useTranslations('page.lists');
-  const [lists, setLists] = useState<ApiWishlist[]>(use(listsPromise));
+  const { data: lists, mutate } = useSWR<ApiWishlist[]>('wishlists', getLists, {
+    fallbackData: initialLists,
+  });
+
   const [newListName, setNewListName] = useState('');
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setNewListName(event.target.value);
   };
 
-  const getUpdatedLists = useCallback(async () => {
-    const fetchedLists = await getLists();
-    setLists(fetchedLists);
-  }, []);
-
   const handleCreateList = async () => {
     await createList(newListName);
     setNewListName(''); // Clear the input after creating the list
-    getUpdatedLists();
+    mutate();
   };
 
   const handleDeleteList = async (listId: number) => {
     await deleteList(listId);
-    getUpdatedLists();
+    mutate();
   };
 
   const handleRemoveItemFromList = async ({
@@ -46,7 +46,7 @@ const ListsOverview: React.FC<ListsOverviewProps> = ({ listsPromise }) => {
     listId: number;
   }) => {
     await removeItemFromList({ itemId, listId });
-    getUpdatedLists();
+    mutate();
   };
 
   return (
@@ -62,35 +62,37 @@ const ListsOverview: React.FC<ListsOverviewProps> = ({ listsPromise }) => {
         onChange={handleInputChange}
       />
       <button disabled={newListName.length === 0} onClick={handleCreateList}>
-        Create list
+        {t('create.button')}
       </button>
 
-      <ul>
-        {lists.map(list => (
-          <li key={list.id}>
-            {list.name}
-            <button onClick={() => handleDeleteList(list.id)}>
-              Delete list
-            </button>
-            <ul>
-              {list.products.map((itemId: number) => (
-                <li key={itemId}>
-                  <Link href={`/item/${itemId}`}>{itemId}</Link>
-                  <button
-                    onClick={() =>
-                      handleRemoveItemFromList({
-                        itemId: itemId,
-                        listId: list.id,
-                      })
-                    }>
-                    Remove item
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
+      {lists && (
+        <ul>
+          {lists.map(list => (
+            <li key={list.id}>
+              {list.name}
+              <button onClick={() => handleDeleteList(list.id)}>
+                Delete list
+              </button>
+              <ul>
+                {list.products.map((itemId: number) => (
+                  <li key={itemId}>
+                    <Link href={`/item/${itemId}`}>{itemId}</Link>
+                    <button
+                      onClick={() =>
+                        handleRemoveItemFromList({
+                          itemId: itemId,
+                          listId: list.id,
+                        })
+                      }>
+                      Remove item
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
+      )}
     </>
   );
 };

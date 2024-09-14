@@ -21,7 +21,8 @@
       "title": "Meow",
       "create": {
         "label": "Meow meow",
-        "placeholder": "Meow"
+        "placeholder": "Meow",
+        "button": "Meow"
       }
     },
     "list": {
