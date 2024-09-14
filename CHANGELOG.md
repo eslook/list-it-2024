@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/eslook/list-it-2024/compare/v1.3.0...v1.4.0) (2024-09-14)
+
+
+### Features
+
+* add post, put and delete of lists on listsoverview ([6eef81a](https://github.com/eslook/list-it-2024/commit/6eef81a4805b762217c1966aa752feb5fc0b7012))
+
 # [1.3.0](https://github.com/eslook/list-it-2024/compare/v1.2.0...v1.3.0) (2024-09-14)
 
 
