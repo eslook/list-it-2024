@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/eslook/list-it-2024/compare/v1.5.0...v1.6.0) (2024-09-14)
+
+
+### Features
+
+* add swr on lists ([6150b16](https://github.com/eslook/list-it-2024/commit/6150b16fb156d7dc3c27176d8adc5a77fcb0ea06))
+
 # [1.5.0](https://github.com/eslook/list-it-2024/compare/v1.4.0...v1.5.0) (2024-09-14)
 
 
