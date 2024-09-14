@@ -58,6 +58,7 @@ Features have been roughly added in the following order:
 - manage item in list on item overview
 - stale while revalidating on lists
 - localize pathnames
+- localized meta, opengraph image, etc
 
 ## Roadmap
 
