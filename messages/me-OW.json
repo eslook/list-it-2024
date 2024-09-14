@@ -39,6 +39,10 @@
     "notFound": {
       "title": "Not meow-nd"
     },
+    "error": {
+      "title": "An error occurred",
+      "tryAgain": "Try again"
+    },
     "loading": {
       "title": "Paw-cessing..."
     }

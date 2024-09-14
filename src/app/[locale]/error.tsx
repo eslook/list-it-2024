@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 
 type ErrorProps = {
   error: Error & { digest?: string };
@@ -8,14 +9,16 @@ type ErrorProps = {
 };
 
 const Error: React.FC<ErrorProps> = ({ error, reset }) => {
+  const t = useTranslations('page.error');
+
   useEffect(() => {
     console.error(error);
   }, [error]);
 
   return (
     <>
-      <p>Error</p>
-      <button onClick={() => reset()}>Try again</button>
+      <p>{t('title')}</p>
+      <button onClick={() => reset()}>{t('tryAgain')}</button>
     </>
   );
 };

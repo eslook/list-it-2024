@@ -39,6 +39,10 @@
     "notFound": {
       "title": "Not found"
     },
+    "error": {
+      "title": "An error occurred",
+      "tryAgain": "Try again"
+    },
     "loading": {
       "title": "Loading..."
     }
