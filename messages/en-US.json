@@ -1,13 +1,17 @@
 {
   "page": {
-    "home": {
-      "title": "Home"
+    "items": {
+      "title": "Home",
+      "description": "Welcome to the home page"
     },
-    "product": {
-      "title": "Product"
+    "item": {
+      "title": "Item"
     },
     "lists": {
       "title": "Lists"
+    },
+    "list": {
+      "title": "List"
     },
     "notFound": {
       "title": "Not found"

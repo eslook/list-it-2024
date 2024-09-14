@@ -29,17 +29,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       )}>
       <main id="main-content" className={styles.main}>
         <Link href="/" locale="me-OW">
-          Switch to Cat Home
+          Switch to Cat
         </Link>
         <Link href="/" locale="en-US">
-          Switch to English Home
+          Switch to English
         </Link>
-        <Link href="/product/5" locale="me-OW">
-          Switch to Cat Detail
-        </Link>
-        <Link href="/product/5" locale="en-US">
-          Switch to English Detail
-        </Link>
+        <Link href="/item/1">Switch to Detail 1</Link>
+        <Link href="/lists">Switch to Lists</Link>
+        <Link href="/list/1">Switch to List 1</Link>
         <noscript>
           <p>
             This website works best with JavaScript enabled. Here&apos;s a{' '}

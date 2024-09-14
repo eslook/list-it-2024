@@ -1,12 +1,16 @@
 {
   "page": {
-    "home": {
-      "title": "Meow"
+    "items": {
+      "title": "Meow",
+      "description": "Meow"
     },
-    "product": {
+    "item": {
       "title": "Meow"
     },
     "lists": {
+      "title": "Meow"
+    },
+    "list": {
       "title": "Meow"
     },
     "notFound": {

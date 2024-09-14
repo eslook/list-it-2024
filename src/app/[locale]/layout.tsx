@@ -20,17 +20,18 @@ export async function generateMetadata({
   const t = await getTranslations({ locale });
 
   return {
-    title: t('page.home.title'),
-    description: t('page.home.title'),
+    title: t('page.items.title'),
+    description: t('page.items.title'),
   };
 }
 
-const RootLayout: React.FC<
-  Readonly<{
-    children: React.ReactNode;
-    params: { locale: string };
-  }>
-> = async ({ children, params: { locale } }) => {
+export default async function RootLayout({
+  children,
+  params: { locale },
+}: {
+  children: React.ReactNode;
+  params: { locale: string };
+}) {
   unstable_setRequestLocale(locale);
   // Providing all messages to the client
   // side is the easiest way to get started
@@ -45,6 +46,4 @@ const RootLayout: React.FC<
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}
