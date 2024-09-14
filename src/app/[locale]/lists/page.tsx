@@ -9,7 +9,9 @@ export default async function Page({
   params: { locale: string };
 }) {
   unstable_setRequestLocale(locale);
-  const listsPromise = getLists();
+  // Passing the initialLists rather than listsPromise as
+  // we're using SWR for this since the lists is modified by the user in the UI
+  const initialLists = await getLists();
 
-  return <ListsOverview listsPromise={listsPromise} />;
+  return <ListsOverview initialLists={initialLists} />;
 }

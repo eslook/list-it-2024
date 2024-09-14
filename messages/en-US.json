@@ -21,7 +21,8 @@
       "title": "Lists",
       "create": {
         "label": "Name new list",
-        "placeholder": "New list"
+        "placeholder": "New list",
+        "button": "Create list"
       }
     },
     "list": {
