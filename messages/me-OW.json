@@ -2,7 +2,11 @@
   "page": {
     "items": {
       "title": "Meow",
-      "description": "Meow"
+      "description": "Meow",
+      "search": {
+        "label": "Meow meow",
+        "placeholder": "Meow meow..."
+      }
     },
     "item": {
       "title": "Meow"
