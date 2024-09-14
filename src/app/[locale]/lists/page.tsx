@@ -1,7 +1,11 @@
 import React from 'react';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
-const Page: React.FC = () => {
+export default async function Page({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  unstable_setRequestLocale(locale);
   return <p>Lists</p>;
-};
-
-export default Page;
+}

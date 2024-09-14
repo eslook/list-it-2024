@@ -1,0 +1,19 @@
+{
+  "page": {
+    "home": {
+      "title": "Home"
+    },
+    "product": {
+      "title": "Product"
+    },
+    "lists": {
+      "title": "Lists"
+    },
+    "notFound": {
+      "title": "Not found"
+    },
+    "loading": {
+      "title": "Loading..."
+    }
+  }
+}

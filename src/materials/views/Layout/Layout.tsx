@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './layout.module.scss';
 import localFont from 'next/font/local';
+import { Link } from '@/i18n/routing';
 
 const geistSans = localFont({
   src: '../../../app/fonts/GeistVF.woff',
@@ -27,6 +28,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         ' '
       )}>
       <main id="main-content" className={styles.main}>
+        <Link href="/" locale="me-OW">
+          Switch to Cat Home
+        </Link>
+        <Link href="/" locale="en-US">
+          Switch to English Home
+        </Link>
+        <Link href="/product/5" locale="me-OW">
+          Switch to Cat Detail
+        </Link>
+        <Link href="/product/5" locale="en-US">
+          Switch to English Detail
+        </Link>
         <noscript>
           <p>
             This website works best with JavaScript enabled. Here&apos;s a{' '}

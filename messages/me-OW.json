@@ -1,0 +1,19 @@
+{
+  "page": {
+    "home": {
+      "title": "Meow"
+    },
+    "product": {
+      "title": "Meow"
+    },
+    "lists": {
+      "title": "Meow"
+    },
+    "notFound": {
+      "title": "Meow"
+    },
+    "loading": {
+      "title": "Meow..."
+    }
+  }
+}
