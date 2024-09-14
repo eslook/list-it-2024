@@ -99,6 +99,18 @@ export const deleteList = async (listId: number) => {
   });
 };
 
+export const addItemToList = async ({
+  itemId,
+  listId,
+}: {
+  itemId: number;
+  listId: number;
+}) => {
+  const list = await getList(listId);
+  list.products = [...list.products, itemId];
+  return updateList(list);
+};
+
 export const removeItemFromList = async ({
   itemId,
   listId,

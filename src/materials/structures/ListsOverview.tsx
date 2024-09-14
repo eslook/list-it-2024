@@ -66,7 +66,7 @@ const ListsOverview: React.FC<ListsOverviewProps> = ({ listsPromise }) => {
       </button>
 
       <ul>
-        {lists.map((list: ApiWishlist) => (
+        {lists.map(list => (
           <li key={list.id}>
             {list.name}
             <button onClick={() => handleDeleteList(list.id)}>

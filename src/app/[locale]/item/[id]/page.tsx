@@ -1,7 +1,7 @@
 import React from 'react';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { ItemOverview } from '@/materials/structures/ItemOverview';
-import { getItem } from '@/utils/api';
+import { getItem, getLists } from '@/utils/api';
 
 export default async function Page({
   params: { locale, id },
@@ -10,5 +10,7 @@ export default async function Page({
 }) {
   unstable_setRequestLocale(locale);
   const itemPromise = getItem(Number(id));
-  return <ItemOverview itemPromise={itemPromise} />;
+  const listsPromise = getLists();
+
+  return <ItemOverview itemPromise={itemPromise} listsPromise={listsPromise} />;
 }
