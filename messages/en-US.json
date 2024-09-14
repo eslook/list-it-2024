@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "List It",
+    "description": "List it: items, lists, we got 'em."
+  },
   "page": {
     "items": {
       "title": "Home",
