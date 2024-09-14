@@ -1,0 +1,10 @@
+// Resetting the style of a native button
+@mixin button-reset {
+  appearance: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+}

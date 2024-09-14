@@ -6,6 +6,7 @@ import {
 } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import Layout from '@/materials/views/Layout';
+import '@/styles/globals.scss';
 
 export async function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }));

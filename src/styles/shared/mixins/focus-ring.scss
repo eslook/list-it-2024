@@ -1,0 +1,11 @@
+// Re-apply default useragent focus ring
+// often disabled through resets or other CSS,
+// or not initially there due to using a role attribute
+// on an originally non interactive element.
+// Example: @include focus-ring;
+// Example: @include focus-ring('+ .#{$class}-label');
+@mixin focus-ring($selector: '') {
+  &:focus-visible #{$selector} {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
+}
