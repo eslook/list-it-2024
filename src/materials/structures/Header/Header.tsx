@@ -41,7 +41,7 @@ const Header: React.FC<HeaderProps> = ({}) => {
                 key={cur}
                 href="/"
                 locale={cur}
-                isInactive={cur !== locale}
+                variant={cur === locale ? 'inactive' : undefined}
                 title={t(cur === locale ? 'currentlyIn' : 'switchTo', {
                   locale: cur,
                 })}>
