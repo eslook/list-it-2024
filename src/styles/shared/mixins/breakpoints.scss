@@ -1,0 +1,11 @@
+@mixin until($bp) {
+  @media screen and (max-width: $bp - 1px), print {
+    @content;
+  }
+}
+
+@mixin from($bp) {
+  @media screen and (min-width: $bp), print {
+    @content;
+  }
+}

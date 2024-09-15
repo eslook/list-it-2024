@@ -4,10 +4,29 @@
     "description": "Lisssst it: mewtems, lissssts, we got meow'm.",
     "opengraph": "Lisssst It"
   },
+  "skipLink": {
+    "content": "Skip to main content"
+  },
+  "header": {
+    "title": "Lisssst it: mewtems, lissssts, we got meow'm.",
+    "logoAlt": "Logo",
+    "goToHome": "Go to Cat Den",
+    "goToLists": "Go to lissssts",
+    "lists": "Lissssts",
+    "switchTo": "Switch to locale: {locale}",
+    "currentlyIn": "Current locale: {locale}",
+    "en-US": "English",
+    "me-OW": "Cat"
+  },
+  "footer": {
+    "title": "Footer",
+    "home": "Home",
+    "lists": "Lists"
+  },
   "page": {
     "items": {
-      "title": "Home (Cat Den)",
-      "description": "Welcome to the cat den",
+      "title": "Cat Den",
+      "description": "Welcome to the Cat Den",
       "search": {
         "label": "Search fur items",
         "placeholder": "Enter a meowword..."
@@ -17,12 +36,10 @@
       "title": "Mewtem",
       "addToList": "Add mewtem to lisssst",
       "removeFromList": "Remove mewtem from lisssst",
-      "specifications": {
-        "title": "Purr-specifications",
-        "processor": "Purr-cessor",
-        "ram": "Cat-nap Memory (RAM)",
-        "storage": "Claw-sit (Storage)"
-      }
+      "brand": "Brand: {brand}",
+      "specifications": "Purr-specifications",
+      "visual": "Fishual",
+      "lists": "Lissssts"
     },
     "lists": {
       "title": "Lissssts",
@@ -38,10 +55,13 @@
       "title": "Lisssst"
     },
     "notFound": {
-      "title": "Not meow-nd"
+      "title": "Not meow-nd",
+      "description": "This page is swiped off the table",
+      "action": "Take me to the Cat Den"
     },
     "error": {
       "title": "An error occurred",
+      "description": "Something went wrong",
       "tryAgain": "Try again"
     },
     "loading": {

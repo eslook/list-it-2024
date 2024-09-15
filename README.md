@@ -59,6 +59,13 @@ Features have been roughly added in the following order:
 - stale while revalidating on lists
 - localize pathnames
 - localized meta, opengraph image, etc
+- get favicon from json server
+- support RTL languages
+- humans.txt
+- basics
+- components
+- structures
+- update structures, views and pages to use the new styled materials
 
 ## Roadmap
 
@@ -71,8 +78,17 @@ The following materials are on the roadmap:
 
 The following features are on the roadmap:
 
-- overall design
-- theme switcher to switch between different visual themes of the app
+- design for cards
+- caching fetched items
+- show full item info in lists
+- style the loading page
+- style the inputs
+- if item does not exist, don't show error page, show notfound (serverside and clientside)
+- add structures that require promise props to storybook
+- filtering on category and brand for items
+- on item overview, click on category/brand to go to items filtered by category/brand
+- pagination for items
+- theme switcher to switch between different visual themes of the app, ie favicon is via json-server, have CSS variables also via json-server
 - login feature
 - merge user's logged out wishlists with logged in wishlists when logging in
 - ...

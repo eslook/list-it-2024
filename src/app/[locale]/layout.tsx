@@ -4,8 +4,9 @@ import {
   unstable_setRequestLocale,
   getTranslations,
 } from 'next-intl/server';
-import { routing } from '@/i18n/routing';
+import { routing, getDirection } from '@/i18n/routing';
 import Layout from '@/materials/views/Layout';
+import '@/styles/globals.scss';
 
 export async function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }));
@@ -19,8 +20,13 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'meta' });
 
   return {
+    // metadataBase (canonical) set automatically by Vercel
     title: t('title'),
     description: t('description'),
+    authors: { name: '/humans.txt' },
+    icons: {
+      icon: [new URL('/favicon.ico', process.env.API_HOST)],
+    },
   };
 }
 
@@ -32,12 +38,13 @@ export default async function RootLayout({
   params: { locale: string };
 }) {
   unstable_setRequestLocale(locale);
+  const dir = getDirection(locale);
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={dir}>
       <body>
         <NextIntlClientProvider messages={messages}>
           <Layout>{children}</Layout>

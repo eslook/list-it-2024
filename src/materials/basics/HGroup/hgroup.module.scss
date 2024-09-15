@@ -1,0 +1,10 @@
+.hgroup {
+  display: flex;
+  // No align-items; auto based on context
+  justify-content: flex-start;
+  flex-direction: column;
+
+  &.is-reversed {
+    flex-direction: column-reverse;
+  }
+}

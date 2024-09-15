@@ -1,0 +1,22 @@
+@import '@/styles/shared/_shared.scss';
+
+.description-list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+  @include from(900px) {
+    gap: 1.5rem;
+  }
+  @include from(1200px) {
+    gap: 2.5rem;
+  }
+
+  dt {
+    text-transform: uppercase;
+    color: var(--description-list-dt-color);
+  }
+  dd {
+    font-size: 1.5rem;
+  }
+}

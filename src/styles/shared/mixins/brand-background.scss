@@ -1,0 +1,8 @@
+@mixin brand-background($color) {
+  background: url('/globe-left-gradient.svg') 150% 50% / 60% no-repeat $color;
+  background-size: 80%;
+  background-position: 150% -10%;
+  @include from(600px) {
+    background-size: 70%;
+  }
+}

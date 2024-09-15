@@ -1,0 +1,23 @@
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--header-background-color);
+  color: var(--header-color);
+
+  text-transform: uppercase;
+  font-weight: 700;
+
+  .header-body {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .header-switcher {
+    margin-inline-start: auto;
+    display: flex;
+    gap: 0.5rem;
+  }
+}

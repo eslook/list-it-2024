@@ -1,0 +1,27 @@
+@import '@/styles/shared/_shared.scss';
+
+.title {
+  text-transform: uppercase;
+  font-size: var(--title-font-size);
+  line-height: 84%;
+  font-weight: 700;
+
+  &.is-1 {
+    --title-font-size: 2.5rem;
+    @include from(600px) {
+      --title-font-size: 3.5rem;
+    }
+  }
+  &.is-2 {
+    --title-font-size: 2rem;
+    @include from(600px) {
+      --title-font-size: 3.25rem;
+    }
+  }
+  &.is-3 {
+    --title-font-size: 1.5rem;
+    @include from(600px) {
+      --title-font-size: 1.875rem;
+    }
+  }
+}

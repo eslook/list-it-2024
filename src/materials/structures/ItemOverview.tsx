@@ -2,8 +2,15 @@
 
 import { use, useCallback, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import { getLists, addItemToList, removeItemFromList } from '@/utils/api';
+import Image from '@/materials/basics/Image';
+import Title from '@/materials/basics/Title';
+import Content from '@/materials/basics/Content';
+import Link from '@/materials/basics/Link';
+import HGroup from '@/materials/basics/HGroup';
+import DescriptionList from '@/materials/basics/DescriptionList';
+import Hero from '@/materials/components/Hero';
+import CardList from '@/materials/components/CardList/CardList';
 
 interface ItemOverviewProps {
   itemPromise: Promise<ApiProduct>;
@@ -35,49 +42,62 @@ const ItemOverview: React.FC<ItemOverviewProps> = ({
 
   return (
     <>
-      <h1>{t('title')}</h1>
+      <Hero>
+        <>
+          <Link href="/">Go back</Link>
+          <HGroup isReversed={true}>
+            <Title size={1} element="h2" value={item.name} />
+            <Content element="p" size="medium" value={item.category} />
+          </HGroup>
+          <Content element="p" value={t('brand', { brand: item.brand })} />
+        </>
+        <>
+          <Title element="h3" value={t('specifications')} isSrOnly />
+          <DescriptionList
+            items={Object.entries(item.specifications).map(([key, value]) => ({
+              key,
+              value,
+            }))}
+          />
+        </>
+        <>
+          <Title element="h3" value={t('visual')} isSrOnly />
+          <Image src={item.image} alt="" width={600} height={600} />
+        </>
+      </Hero>
 
-      <ul>
-        {lists.map(list => (
-          <li key={list.id}>
-            {list.name}
-            <button
-              disabled={list.products.includes(item.id)}
-              onClick={() =>
-                handleAddItemToList({
-                  listId: list.id,
-                })
-              }>
-              {t('addToList')}
-            </button>
-            <button
-              disabled={!list.products.includes(item.id)}
-              onClick={() =>
-                handleRemoveItemFromList({
-                  listId: list.id,
-                })
-              }>
-              {t('removeFromList')}
-            </button>
-          </li>
-        ))}
-      </ul>
-
-      <p>{item.name}</p>
-      <p>{item.brand}</p>
-      <p>{item.category}</p>
-      <Image src={item.image} alt="" width={600} height={600} />
-      <p>{t('specifications.title')}</p>
-      <dl>
-        <dt>{t('specifications.processor')}</dt>
-        <dd>{item.specifications.processor}</dd>
-        <dt>{t('specifications.ram')}</dt>
-        <dd>{item.specifications.ram}</dd>
-        <dt>{t('specifications.storage')}</dt>
-        <dd>{item.specifications.storage}</dd>
-      </dl>
+      {lists && (
+        <>
+          <Title element="h3" value={t('lists')} isSrOnly />
+          <CardList>
+            {lists.map(list => (
+              <div key={list.id}>
+                {list.name}
+                <button
+                  disabled={list.products.includes(item.id)}
+                  onClick={() =>
+                    handleAddItemToList({
+                      listId: list.id,
+                    })
+                  }>
+                  {t('addToList')}
+                </button>
+                <button
+                  disabled={!list.products.includes(item.id)}
+                  onClick={() =>
+                    handleRemoveItemFromList({
+                      listId: list.id,
+                    })
+                  }>
+                  {t('removeFromList')}
+                </button>
+              </div>
+            ))}
+          </CardList>
+        </>
+      )}
     </>
   );
 };
 
-export { ItemOverview };
+export default ItemOverview;

@@ -3,9 +3,11 @@ import { NextIntlClientProvider } from 'next-intl';
 import messages from './messages/en-US.json';
 import { render, RenderOptions } from '@testing-library/react';
 
+export const locale = 'en-US';
+
 // Provide customRender that wraps with the needed Providers
 const ProviderWrapper = ({ children }: { children: React.ReactNode }) => (
-  <NextIntlClientProvider locale="en-US" messages={messages}>
+  <NextIntlClientProvider locale={locale} messages={messages}>
     {children}
   </NextIntlClientProvider>
 );
@@ -16,4 +18,4 @@ const customRender = (
 ) => render(ui, { wrapper: ProviderWrapper, ...options });
 
 export * from '@testing-library/react';
-export { customRender as render };
+export { customRender as render, messages };

@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import MetaPageBlock from '@/materials/structures/MetaPageBlock';
 
 type ErrorProps = {
   error: Error & { digest?: string };
@@ -16,10 +17,13 @@ const Error: React.FC<ErrorProps> = ({ error, reset }) => {
   }, [error]);
 
   return (
-    <>
-      <p>{t('title')}</p>
-      <button onClick={() => reset()}>{t('tryAgain')}</button>
-    </>
+    <MetaPageBlock
+      title={t('title')}
+      description={t('description')}
+      action={t('tryAgain')}
+      actionFunc={reset}
+      code="500"
+    />
   );
 };
 

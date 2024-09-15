@@ -1,6 +1,6 @@
 import React from 'react';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { ItemsOverview } from '@/materials/structures/ItemsOverview';
+import ItemsOverview from '@/materials/structures/ItemsOverview';
 import { getItems } from '@/utils/api';
 
 export default async function Page({

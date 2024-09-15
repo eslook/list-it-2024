@@ -1,0 +1,15 @@
+/**
+ * File that applies any style fixes to storybook caused by the app styling.
+ * This is styling we don't want in production, so the app should not be doing the exception handling.
+ */
+
+// set html to min-height 100% to have the background also fill the screen
+html {
+  min-height: 100%;
+}
+
+// overwrite the hardcoded colors in the storybook preview
+.sbdocs-preview {
+  color: var(--body-color) !important;
+  background-color: var(--body-background-color) !important;
+}

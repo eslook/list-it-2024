@@ -1,5 +1,5 @@
 import React from 'react';
-import NextLink, { LinkProps as NextLinkProps } from 'next/link';
+import { Link as NextLink, LinkProps as NextLinkProps } from '@/i18n/routing';
 import styles from './link.module.scss';
 
 interface LinkProps extends NextLinkProps {
@@ -13,6 +13,10 @@ interface LinkProps extends NextLinkProps {
    */
   href: string;
   /**
+   * Whether the link is styled as inactive
+   */
+  isInactive?: boolean;
+  /**
    * The content of the link
    */
   children: React.ReactNode;
@@ -25,6 +29,7 @@ interface LinkProps extends NextLinkProps {
 const Link: React.FC<LinkProps> = ({
   title,
   href,
+  isInactive,
   children,
   className,
   /**
@@ -33,6 +38,7 @@ const Link: React.FC<LinkProps> = ({
   ...props
 }) => {
   const classes = [styles.link];
+  if (isInactive) classes.push(styles['is-inactive']);
   if (className) classes.push(className);
   return (
     <NextLink

@@ -1,0 +1,40 @@
+// Skip Link: http://web-accessibility.carnegiemuseums.org/code/skip-link/
+// Source: https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/
+
+.skip-link {
+  left: -999px;
+  position: absolute;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999;
+
+  // Regardless of branding
+  background-color: #ffffff;
+  color: #000000;
+
+  &:focus,
+  &:active {
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    margin: 10px;
+    padding: 8px;
+    z-index: 999;
+  }
+}
+
+// Additional for RTL support
+
+html[dir='rtl'] .skip-link {
+  left: unset;
+  right: -999px;
+  &:focus,
+  &:active {
+    left: unset;
+    right: unset;
+  }
+}
