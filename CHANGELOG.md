@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/eslook/list-it-2024/compare/v1.12.2...v1.13.0) (2024-09-15)
+
+
+### Features
+
+* use swr for lists in item overview ([cb393a5](https://github.com/eslook/list-it-2024/commit/cb393a5428c36abb9a34ca56f522d1f66d598057))
+
 ## [1.12.2](https://github.com/eslook/list-it-2024/compare/v1.12.1...v1.12.2) (2024-09-15)
 
 
