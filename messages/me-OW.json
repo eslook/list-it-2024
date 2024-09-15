@@ -84,7 +84,8 @@
         "milkFrother": "Milk Frother"
       },
       "visual": "Fishual",
-      "lists": "Lissssts"
+      "lists": "Lissssts",
+      "listItems": "({amount} mewtems)"
     },
     "lists": {
       "title": "Lissssts",
@@ -94,7 +95,8 @@
         "button": "Create lisssst"
       },
       "deleteList": "De-claw lisssst",
-      "removeItemFromList": "Remove mewtem from lisssst"
+      "removeItemFromList": "Remove mewtem from lisssst",
+      "listItems": "({amount} mewtems)"
     },
     "list": {
       "title": "Lisssst"

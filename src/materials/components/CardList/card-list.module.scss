@@ -10,14 +10,14 @@
   background-color: var(--card-list-background-color);
   padding-block: 1rem;
 
-  &:not(:first-child) .card-list-itemst {
+  &:not(:first-child) .card-list-items {
     margin-top: -2rem;
     @include from(600px) {
       margin-top: -4rem;
     }
   }
 
-  .card-list-itemst {
+  .card-list-items {
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -28,6 +28,7 @@
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
+      gap: 4rem;
     }
 
     .card-list-item {
@@ -35,7 +36,7 @@
       flex-direction: column;
       color: var(--card-list-card-color);
       background-color: var(--card-list-card-background-color);
-      padding: 0 1rem;
+      padding: 0 1rem 1rem;
       @include from(600px) {
         flex: 0 0 250px;
       }

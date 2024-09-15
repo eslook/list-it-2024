@@ -4,6 +4,7 @@ import React, { use, useCallback, useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { debounce } from '@/utils/debounce';
 import Link from '@/materials/basics/Link';
+import Content from '@/materials/basics/Content';
 import Image from '@/materials/basics/Image';
 import Title from '@/materials/basics/Title';
 import HGroup from '@/materials/basics/HGroup';
@@ -74,12 +75,17 @@ const ItemsOverview: React.FC<ItemsOverviewProps> = ({ itemsPromise }) => {
       </Hero>
 
       <CardList>
-        {filteredItems.map((item: any) => (
+        {filteredItems.map(item => (
           <div key={item.id}>
             <Image src={item.image} alt="" width={250} height={250} />
             <Link key={item.id} href={`/item/${item.id}`}>
-              {item.name}
+              <Title size={3} element="p" value={item.name} />
             </Link>
+            <Content
+              size="small"
+              element="p"
+              value={[item.brand, item.category].join(' | ')}
+            />
           </div>
         ))}
       </CardList>

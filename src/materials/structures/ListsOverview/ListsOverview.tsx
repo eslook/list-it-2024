@@ -14,6 +14,7 @@ import HGroup from '@/materials/basics/HGroup';
 import Title from '@/materials/basics/Title';
 import CardList from '@/materials/components/CardList/CardList';
 import Hero from '@/materials/components/Hero';
+import Content from '@/materials/basics/Content';
 
 interface ListsOverviewProps {
   initialLists: ApiWishlist[];
@@ -80,7 +81,13 @@ const ListsOverview: React.FC<ListsOverviewProps> = ({ initialLists }) => {
         <CardList>
           {lists.map(list => (
             <div key={list.id}>
-              {list.name}
+              <Title size={3} element="p" value={list.name} />
+              <Content
+                size="small"
+                element="p"
+                value={t('listItems', { amount: list.products.length })}
+              />
+
               <button onClick={() => handleDeleteList(list.id)}>
                 {t('deleteList')}
               </button>

@@ -54,8 +54,9 @@ describe('ListsOverview Structure', () => {
   it('calls deleteList with correct arguments once', async () => {
     const { deleteList, getLists } = require('@/utils/api');
     renderListsOverview();
-    const listItem = screen.getByText(mockListToModify.name);
-    const deleteButton = within(listItem).getByText('deleteList');
+    const list = screen.getByText(mockListToModify.name).closest('li');
+    if (!list) throw new Error('List not found');
+    const deleteButton = within(list).getByText('deleteList');
     fireEvent.click(deleteButton);
     await waitFor(() => {
       expect(deleteList).toHaveBeenCalledWith(mockListToModify.id);
@@ -66,7 +67,8 @@ describe('ListsOverview Structure', () => {
   it('calls removeItemFromList with correct arguments once', async () => {
     const { removeItemFromList, getLists } = require('@/utils/api');
     renderListsOverview();
-    const list = screen.getByText(mockListToModify.name);
+    const list = screen.getByText(mockListToModify.name).closest('li');
+    if (!list) throw new Error('List not found');
     const listItem = within(list)
       .getByText(mockItemIdToRemove.toString())
       .closest('li');
