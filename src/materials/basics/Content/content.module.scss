@@ -1,0 +1,71 @@
+@import '@/styles/shared/_shared.scss';
+
+// In the reset file, we already limit what we do and do not reset.
+// In this file, we add styles that are specific to RichText content.
+// Note that all texts always use Content, else a different element such as Link or Title that handles readability itself
+
+.content {
+  font-size: var(--title-font-size);
+
+  &.is-small {
+    --title-font-size: 0.875rem;
+  }
+  &.is-medium {
+    --title-font-size: 1.125rem;
+    @include from(600px) {
+      --title-font-size: 1.5rem;
+    }
+  }
+  &.is-large {
+    --title-font-size: 1.25rem;
+    @include from(600px) {
+      --title-font-size: 1.5rem;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    // Spacings between elements and titles
+    &:not(:first-child) {
+      margin-top: 2.5rem;
+    }
+  }
+
+  // Spacing between all elements
+  > *:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  // Links and Buttons (styled similarly)
+  button {
+    @include button-reset;
+    cursor: pointer;
+  }
+
+  button,
+  a {
+    color: inherit;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration-style: double;
+    }
+  }
+
+  // Lists
+  // (keep ol list-style-type the way it is)
+  ul {
+    list-style-type: square;
+  }
+
+  ul,
+  ol {
+    padding-left: 1em;
+  }
+}
