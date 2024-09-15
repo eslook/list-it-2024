@@ -19,5 +19,12 @@ const config: StorybookConfig = {
     ...config,
     NEXT_PUBLIC_API_HOST: '', // followed up by staticDirs accepting ../api/public
   }),
+  webpackFinal: async config => {
+    if (!config.resolve) config.resolve = {};
+    if (!config.resolve.alias) config.resolve.alias = {};
+    // Mocking API requests in Storybook
+    config.resolve.alias['@/utils/api'] = require.resolve('../__mocks__/api');
+    return config;
+  }
 };
 export default config;
