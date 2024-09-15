@@ -34,6 +34,25 @@ const ItemsOverview: React.FC<ItemsOverviewProps> = ({ itemsPromise }) => {
     []
   );
 
+  const renderMessage = useCallback(() => {
+    if (searchTerm.length === 0) {
+      return <p>{t('allItems', { amount: filteredItems.length })}</p>;
+    }
+
+    if (filteredItems.length === 0) {
+      return <p>{t('noResults', { keyword: searchTerm })}</p>;
+    }
+
+    return (
+      <p>
+        {t('results', {
+          keyword: searchTerm,
+          amount: filteredItems.length,
+        })}
+      </p>
+    );
+  }, [t, searchTerm, filteredItems]);
+
   return (
     <>
       <Hero>
@@ -49,6 +68,8 @@ const ItemsOverview: React.FC<ItemsOverviewProps> = ({ itemsPromise }) => {
             placeholder={t('search.placeholder')}
             onChange={handleSearchChange}
           />
+
+          {renderMessage()}
         </>
       </Hero>
 

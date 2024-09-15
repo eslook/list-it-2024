@@ -33,7 +33,10 @@
       "search": {
         "label": "Search fur items",
         "placeholder": "Enter a meowword..."
-      }
+      },
+      "allItems": "Showing {amount} mewtems",
+      "noResults": "No mewtems found for {keyword}",
+      "results": "Found {amount} mewtems for {keyword}"
     },
     "item": {
       "title": "Mewtem",
