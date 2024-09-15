@@ -47,6 +47,17 @@ select {
   font: inherit;
 }
 /*
+  Set default input styles
+*/
+input,
+textarea,
+select {
+  font-weight: 700;
+  line-height: 0.75;
+  padding: 0.75rem 1rem 0.875rem;
+  border-radius: 2024px; // rounded
+}
+/*
   Avoid text overflows
 */
 p,
