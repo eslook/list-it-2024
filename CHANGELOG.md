@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/eslook/list-it-2024/compare/v1.10.0...v1.11.0) (2024-09-15)
+
+
+### Features
+
+* add button variant style to link basic ([e5849a9](https://github.com/eslook/list-it-2024/commit/e5849a97027ea8c59ab39fbf6e9edeb921c611df))
+
 # [1.10.0](https://github.com/eslook/list-it-2024/compare/v1.9.0...v1.10.0) (2024-09-15)
 
 
