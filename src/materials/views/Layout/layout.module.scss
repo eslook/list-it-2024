@@ -4,8 +4,6 @@
   flex-direction: column;
   justify-content: stretch;
   align-items: stretch;
-  max-width: 2048px;
-  margin-inline: auto;
 }
 
 .main {
@@ -14,6 +12,4 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 1rem;
-  gap: 1rem;
 }
