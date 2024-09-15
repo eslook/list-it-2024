@@ -3,6 +3,7 @@ import styles from './layout.module.scss';
 import { darkerGrotesqueClassName } from '@/utils/googleFontClassNames';
 import Header from '@/materials/structures/Header';
 import Footer from '@/materials/structures/Footer';
+import Container from '@/materials/basics/Container';
 
 interface LayoutProps {
   /**
@@ -15,17 +16,19 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className={[styles.layout, darkerGrotesqueClassName].join(' ')}>
       <Header />
-      <noscript>
-        <p>
-          This website works best with JavaScript enabled. Here&apos;s a{' '}
-          <a
-            href="https://www.enable-javascript.com/"
-            target="_blank"
-            rel="noopener">
-            guide to help you turn it on
-          </a>
-          .
-        </p>
+      <noscript className={styles.noscript}>
+        <Container>
+          <p>
+            This website works best with JavaScript enabled. Here&apos;s a{' '}
+            <a
+              href="https://www.enable-javascript.com/"
+              target="_blank"
+              rel="noopener">
+              guide to help you turn it on
+            </a>
+            .
+          </p>
+        </Container>
       </noscript>
       <main id="main-content" className={styles.main}>
         {children}

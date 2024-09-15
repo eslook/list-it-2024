@@ -13,3 +13,22 @@
   justify-content: flex-start;
   align-items: center;
 }
+
+.noscript {
+  flex-grow: 1;
+  width: 100%;
+
+  text-align: center;
+  color: var(--noscript-color);
+  background-color: var(--noscript-background-color);
+
+  a {
+    color: inherit;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
