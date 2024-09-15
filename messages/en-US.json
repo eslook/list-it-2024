@@ -7,6 +7,9 @@
   "skipLink": {
     "content": "Skip to main content"
   },
+  "loading": {
+    "title": "Loading..."
+  },
   "header": {
     "title": "List it: items, lists, we got 'em.",
     "logoAlt": "Logo",

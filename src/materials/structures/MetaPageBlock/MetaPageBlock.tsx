@@ -18,11 +18,11 @@ export interface MetaPageBlockProps {
   /**
    * Description in the block
    */
-  description: string;
+  description?: string;
   /**
    * Text of the action in the block
    */
-  action: string;
+  action?: string;
   /**
    * Function of the action in the block,
    * defaults to linking to the home page
@@ -45,12 +45,15 @@ const MetaPageBlock: React.FC<MetaPageBlockProps> = ({
           <Title size={1} element="h2" value={title} />
           {code && <Content element="p" size="large" value={code} />}
         </HGroup>
-        <Content element="p" size="large" value={description} />
-        {actionFunc ? (
-          <button onClick={actionFunc}>{action}</button>
-        ) : (
-          <Link href="/">{action}</Link>
+        {description && (
+          <Content element="p" size="large" value={description} />
         )}
+        {action &&
+          (actionFunc ? (
+            <button onClick={actionFunc}>{action}</button>
+          ) : (
+            <Link href="/">{action}</Link>
+          ))}
       </Container>
     </div>
   );
