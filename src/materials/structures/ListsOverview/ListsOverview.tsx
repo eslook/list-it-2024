@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import useSWR from 'swr';
 import { useTranslations } from 'next-intl';
 import Link from '@/materials/basics/Link';
