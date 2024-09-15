@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({}) => {
 
           <Link href="/" title={t('goToHome')}>
             <Image
-              src={`${process.env.API_HOST}/logo.svg`}
+              src={`${process.env.NEXT_PUBLIC_API_HOST}/logo.svg`}
               alt={t('logoAlt')}
               width={51}
               height={60}

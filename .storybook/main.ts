@@ -17,7 +17,7 @@ const config: StorybookConfig = {
   ],
   env: config => ({
     ...config,
-    API_HOST: '', // followed up by staticDirs accepting ../api/public
+    NEXT_PUBLIC_API_HOST: '', // followed up by staticDirs accepting ../api/public
   }),
 };
 export default config;

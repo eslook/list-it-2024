@@ -19,7 +19,7 @@ const makeCall = async ({
   method: string;
   body: object | null;
 }) => {
-  const url = `${process.env.API_HOST}${endpoint}`;
+  const url = `${process.env.NEXT_PUBLIC_API_HOST}${endpoint}`;
   const response = await fetch(url, {
     method,
     body: body && JSON.stringify(body),
