@@ -25,7 +25,7 @@ export async function generateMetadata({
     description: t('description'),
     authors: { name: '/humans.txt' },
     icons: {
-      icon: [new URL('/favicon.ico', process.env.API_HOST)],
+      icon: [new URL('/favicon.ico', process.env.NEXT_PUBLIC_API_HOST)],
     },
   };
 }
