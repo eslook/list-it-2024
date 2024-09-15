@@ -30,9 +30,7 @@ type Product = {
   category: string;
   image: string;
   specifications: {
-    processor: string;
-    ram: string;
-    storage: string;
+    [key: string]: string;
   };
 };
 

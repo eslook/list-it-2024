@@ -4,6 +4,25 @@
     "description": "List it: items, lists, we got 'em.",
     "opengraph": "List It"
   },
+  "skipLink": {
+    "content": "Skip to main content"
+  },
+  "header": {
+    "title": "List it: items, lists, we got 'em.",
+    "logoAlt": "Logo",
+    "goToHome": "Go to home",
+    "goToLists": "Go to lists",
+    "lists": "Lists",
+    "switchTo": "Switch to locale: {locale}",
+    "currentlyIn": "Current locale: {locale}",
+    "en-US": "English",
+    "me-OW": "Cat"
+  },
+  "footer": {
+    "title": "Footer",
+    "home": "Home",
+    "lists": "Lists"
+  },
   "page": {
     "items": {
       "title": "Home",
@@ -17,12 +36,10 @@
       "title": "Item",
       "addToList": "Add item to list",
       "removeFromList": "Remove item from list",
-      "specifications": {
-        "title": "Specifications",
-        "processor": "Processor",
-        "ram": "RAM",
-        "storage": "Storage"
-      }
+      "brand": "Brand: {brand}",
+      "specifications": "Specifications",
+      "visual": "Visual",
+      "lists": "Lists"
     },
     "lists": {
       "title": "Lists",
@@ -38,10 +55,13 @@
       "title": "List"
     },
     "notFound": {
-      "title": "Not found"
+      "title": "Are you lost?",
+      "description": "This page doesn't exist",
+      "action": "Take me home"
     },
     "error": {
       "title": "An error occurred",
+      "description": "Something went wrong",
       "tryAgain": "Try again"
     },
     "loading": {
