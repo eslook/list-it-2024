@@ -2,8 +2,13 @@
 
 import { use, useCallback, useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
 import { debounce } from '@/utils/debounce';
+import Link from '@/materials/basics/Link';
+import Image from '@/materials/basics/Image';
+import Title from '@/materials/basics/Title';
+import HGroup from '@/materials/basics/HGroup';
+import Hero from '@/materials/components/Hero';
+import CardList from '@/materials/components/CardList/CardList';
 
 interface ItemsOverviewProps {
   itemsPromise: Promise<ApiProduct[]>;
@@ -21,6 +26,7 @@ const ItemsOverview: React.FC<ItemsOverviewProps> = ({ itemsPromise }) => {
     );
   }, [items, searchTerm]);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleSearchChange = useCallback(
     debounce((event: React.ChangeEvent<HTMLInputElement>) => {
       setSearchTerm(event.target.value);
@@ -30,25 +36,34 @@ const ItemsOverview: React.FC<ItemsOverviewProps> = ({ itemsPromise }) => {
 
   return (
     <>
-      <h1>{t('title')}</h1>
-      <label htmlFor="search">{t('search.label')}</label>
-      <input
-        id="search"
-        type="search"
-        placeholder={t('search.placeholder')}
-        onChange={handleSearchChange}
-      />
-      <ul>
+      <Hero>
+        <>
+          <HGroup isReversed={true}>
+            <Title size={1} element="h2" value={t('title')} />
+          </HGroup>
+
+          <label htmlFor="search">{t('search.label')}</label>
+          <input
+            id="search"
+            type="search"
+            placeholder={t('search.placeholder')}
+            onChange={handleSearchChange}
+          />
+        </>
+      </Hero>
+
+      <CardList>
         {filteredItems.map((item: any) => (
-          <li key={item.id}>
+          <div key={item.id}>
+            <Image src={item.image} alt="" width={600} height={600} />
             <Link key={item.id} href={`/item/${item.id}`}>
               {item.name}
             </Link>
-          </li>
+          </div>
         ))}
-      </ul>
+      </CardList>
     </>
   );
 };
 
-export { ItemsOverview };
+export default ItemsOverview;
