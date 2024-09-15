@@ -1,3 +1,5 @@
+[View Demo](https://list-it-2024.vercel.app/)
+
 Welcome to List It 2024! This project is built with React, Next.js and TypeScript, testing is done using Jest and it comes with a Storybook app and a JSON server. It is deployed with Vercel.
 
 ## Getting Started
