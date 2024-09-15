@@ -81,7 +81,8 @@ describe('ItemOverview Structure', () => {
   it('calls removeItemFromList with correct arguments once', async () => {
     const { removeItemFromList, getLists } = require('@/utils/api');
     renderItemOverview();
-    const listItem = screen.getByText(listToRemoveFrom.name);
+    const listItem = screen.getByText(listToRemoveFrom.name).closest('li');
+    if (!listItem) throw new Error('List item not found');
     const removeButton = within(listItem).getByText('removeFromList');
     fireEvent.click(removeButton);
     await waitFor(() => {
@@ -96,7 +97,8 @@ describe('ItemOverview Structure', () => {
   it('calls addItemToList with correct arguments once', async () => {
     const { addItemToList, getLists } = require('@/utils/api');
     renderItemOverview();
-    const listItem = screen.getByText(listToAddTo.name);
+    const listItem = screen.getByText(listToAddTo.name).closest('li');
+    if (!listItem) throw new Error('List item not found');
     const addButton = within(listItem).getByText('addToList');
     fireEvent.click(addButton);
     await waitFor(() => {
