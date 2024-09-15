@@ -11,9 +11,9 @@
   padding-block: 1rem;
 
   &:not(:first-child) .card-list-items {
-    margin-top: -2rem;
+    margin-block-start: -2rem;
     @include from(600px) {
-      margin-top: -4rem;
+      margin-block-start: -4rem;
     }
   }
 
@@ -44,7 +44,7 @@
       }
       > div {
         &:has(img) {
-          margin-top: -1rem;
+          margin-block-start: -1rem;
           @include until(600px) {
             align-items: center;
           }

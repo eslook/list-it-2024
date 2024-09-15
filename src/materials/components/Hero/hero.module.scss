@@ -35,7 +35,7 @@
 
     @include from(900px) {
       &:not(:first-child) {
-        padding-top: 2.375rem;
+        padding-block-start: 2.375rem;
       }
     }
 
