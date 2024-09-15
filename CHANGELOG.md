@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/eslook/list-it-2024/compare/v1.12.0...v1.12.1) (2024-09-15)
+
+
+### Bug Fixes
+
+* increase header z-index to position sticky above card list ([de2abab](https://github.com/eslook/list-it-2024/commit/de2abab5be2964406b4e67cfe0b7f663e2d6f4c0))
+
 # [1.12.0](https://github.com/eslook/list-it-2024/compare/v1.11.0...v1.12.0) (2024-09-15)
 
 
