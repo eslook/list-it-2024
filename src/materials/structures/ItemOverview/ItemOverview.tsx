@@ -1,6 +1,7 @@
 'use client';
 
-import React, { use, useCallback, useState } from 'react';
+import React, { use } from 'react';
+import useSWR from 'swr';
 import { useTranslations } from 'next-intl';
 import { getLists, addItemToList, removeItemFromList } from '@/utils/api';
 import Image from '@/materials/basics/Image';
@@ -14,30 +15,27 @@ import CardList from '@/materials/components/CardList/CardList';
 
 interface ItemOverviewProps {
   itemPromise: Promise<ApiProduct>;
-  listsPromise: Promise<ApiWishlist[]>;
+  initialLists: ApiWishlist[];
 }
 
 const ItemOverview: React.FC<ItemOverviewProps> = ({
   itemPromise,
-  listsPromise,
+  initialLists,
 }) => {
   const t = useTranslations('page.item');
   const item = use(itemPromise);
-  const [lists, setLists] = useState<ApiWishlist[]>(use(listsPromise));
-
-  const getUpdatedLists = useCallback(async () => {
-    const fetchedLists = await getLists();
-    setLists(fetchedLists);
-  }, []);
+  const { data: lists, mutate } = useSWR<ApiWishlist[]>('wishlists', getLists, {
+    fallbackData: initialLists,
+  });
 
   const handleAddItemToList = async ({ listId }: { listId: number }) => {
     await addItemToList({ itemId: item.id, listId });
-    getUpdatedLists();
+    mutate();
   };
 
   const handleRemoveItemFromList = async ({ listId }: { listId: number }) => {
     await removeItemFromList({ itemId: item.id, listId });
-    getUpdatedLists();
+    mutate();
   };
 
   return (
