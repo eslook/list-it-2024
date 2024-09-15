@@ -3,6 +3,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { ItemOverview } from '@/materials/structures/ItemOverview';
 import { getItem, getLists } from '@/utils/api';
 import { Metadata, ResolvingMetadata } from 'next';
+import { notFound } from 'next/navigation';
 
 export async function generateMetadata(
   {
@@ -12,16 +13,20 @@ export async function generateMetadata(
   },
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const item = await getItem(Number(params.id));
-  const parentTitle = (await parent).title?.absolute;
-  const titles = [item.name, parentTitle].filter(Boolean);
+  try {
+    const item = await getItem(Number(params.id));
+    const parentTitle = (await parent).title?.absolute;
+    const titles = [item.name, parentTitle].filter(Boolean);
 
-  return {
-    title: titles.join(' | '),
-    openGraph: {
-      images: [item.image],
-    },
-  };
+    return {
+      title: titles.join(' | '),
+      openGraph: {
+        images: [item.image],
+      },
+    };
+  } catch (error) {
+    notFound();
+  }
 }
 
 export default async function Page({
