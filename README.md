@@ -61,6 +61,11 @@ Features have been roughly added in the following order:
 - localized meta, opengraph image, etc
 - get favicon from json server
 - support RTL languages
+- humans.txt
+- basics
+- components
+- structures
+- update structures, views and pages to use the new styled materials
 
 ## Roadmap
 
