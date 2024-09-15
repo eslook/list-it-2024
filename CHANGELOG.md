@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/eslook/list-it-2024/compare/v1.8.0...v1.9.0) (2024-09-15)
+
+
+### Features
+
+* use meta page block in loading component ([839dbfb](https://github.com/eslook/list-it-2024/commit/839dbfbf5ed8dc3815421be96d4968321083298e))
+
 # [1.8.0](https://github.com/eslook/list-it-2024/compare/v1.7.0...v1.8.0) (2024-09-15)
 
 
