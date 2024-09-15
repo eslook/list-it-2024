@@ -23,6 +23,11 @@ export const routing = defineRouting({
   },
 });
 
+// As is well known, cats read right to left
+export const getDirection = (locale: string) => {
+  return locale === 'me-OW' ? 'rtl' : 'ltr';
+};
+
 // Lightweight wrappers around Next.js' navigation APIs
 // that will consider the routing configuration
 export const { Link, redirect, usePathname, useRouter } =

@@ -4,7 +4,7 @@ import {
   unstable_setRequestLocale,
   getTranslations,
 } from 'next-intl/server';
-import { routing } from '@/i18n/routing';
+import { routing, getDirection } from '@/i18n/routing';
 import Layout from '@/materials/views/Layout';
 import '@/styles/globals.scss';
 
@@ -36,12 +36,13 @@ export default async function RootLayout({
   params: { locale: string };
 }) {
   unstable_setRequestLocale(locale);
+  const dir = getDirection(locale);
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={dir}>
       <body>
         <NextIntlClientProvider messages={messages}>
           <Layout>{children}</Layout>

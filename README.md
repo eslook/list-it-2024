@@ -60,6 +60,7 @@ Features have been roughly added in the following order:
 - localize pathnames
 - localized meta, opengraph image, etc
 - get favicon from json server
+- support RTL languages
 
 ## Roadmap
 
