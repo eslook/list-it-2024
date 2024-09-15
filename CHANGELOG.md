@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/eslook/list-it-2024/compare/v1.9.0...v1.10.0) (2024-09-15)
+
+
+### Features
+
+* adjust raspberry color for accessible contrast ratio against cinder ([c1893f6](https://github.com/eslook/list-it-2024/commit/c1893f65fd05f07e04a526c20a9427226a6c3d66))
+
 # [1.9.0](https://github.com/eslook/list-it-2024/compare/v1.8.0...v1.9.0) (2024-09-15)
 
 
