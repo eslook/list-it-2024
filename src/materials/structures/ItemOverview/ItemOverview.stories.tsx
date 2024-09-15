@@ -13,6 +13,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     itemPromise: new Promise(resolve => resolve(db.products[0])),
-    listsPromise: new Promise(resolve => resolve(db.wishlists)),
+    initialLists: db.wishlists,
   },
 };

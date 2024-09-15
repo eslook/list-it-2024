@@ -34,22 +34,16 @@ if (mockLists[1].products.includes(mockItem.id))
 const listToAddTo = mockLists[1];
 
 const itemPromise = Promise.resolve(mockItem);
-const listsPromise = Promise.resolve(mockLists);
 
 const renderItemOverview = () =>
-  render(
-    <ItemOverview itemPromise={itemPromise} listsPromise={listsPromise} />
-  );
+  render(<ItemOverview itemPromise={itemPromise} initialLists={mockLists} />);
 
 describe('ItemOverview Structure', () => {
   beforeEach(() => {
     const use = require('react').use;
-    use.mockImplementation((promise: Promise<ApiProduct | ApiWishlist[]>) => {
+    use.mockImplementation((promise: Promise<ApiProduct>) => {
       if (promise === itemPromise) {
         return mockItem;
-      }
-      if (promise === listsPromise) {
-        return mockLists;
       }
     });
   });

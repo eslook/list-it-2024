@@ -36,7 +36,7 @@ export default async function Page({
 }) {
   unstable_setRequestLocale(locale);
   const itemPromise = getItem(Number(id));
-  const listsPromise = getLists();
+  const initialLists = await getLists();
 
-  return <ItemOverview itemPromise={itemPromise} listsPromise={listsPromise} />;
+  return <ItemOverview itemPromise={itemPromise} initialLists={initialLists} />;
 }
