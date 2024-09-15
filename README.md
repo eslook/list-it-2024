@@ -59,6 +59,7 @@ Features have been roughly added in the following order:
 - stale while revalidating on lists
 - localize pathnames
 - localized meta, opengraph image, etc
+- get favicon from json server
 
 ## Roadmap
 

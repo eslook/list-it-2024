@@ -1,8 +1,3 @@
-const HOST =
-  process.env.NODE_ENV.toLowerCase() === 'development'
-    ? 'http://localhost:8080/'
-    : 'https://list-it-api-2024.vercel.app/';
-
 /**
  * Make call to the API, with specified endpoint, method and body.
  *
@@ -24,7 +19,7 @@ const makeCall = async ({
   method: string;
   body: object | null;
 }) => {
-  const url = `${HOST}${endpoint}`;
+  const url = `${process.env.API_HOST}${endpoint}`;
   const response = await fetch(url, {
     method,
     body: body && JSON.stringify(body),
@@ -44,7 +39,7 @@ const makeCall = async ({
 
 export const getItems = async (): Promise<ApiProduct[]> => {
   return makeCall({
-    endpoint: `products`,
+    endpoint: `/products`,
     method: 'GET',
     body: null,
   });
@@ -52,7 +47,7 @@ export const getItems = async (): Promise<ApiProduct[]> => {
 
 export const getItem = async (id: number): Promise<ApiProduct> => {
   return makeCall({
-    endpoint: `products/${id}`,
+    endpoint: `/products/${id}`,
     method: 'GET',
     body: null,
   });
@@ -60,7 +55,7 @@ export const getItem = async (id: number): Promise<ApiProduct> => {
 
 export const getLists = async (): Promise<ApiWishlist[]> => {
   return makeCall({
-    endpoint: 'wishlists',
+    endpoint: '/wishlists',
     method: 'GET',
     body: null,
   });
@@ -68,7 +63,7 @@ export const getLists = async (): Promise<ApiWishlist[]> => {
 
 export const getList = async (id: number): Promise<ApiWishlist> => {
   return makeCall({
-    endpoint: `wishlists/${id}`,
+    endpoint: `/wishlists/${id}`,
     method: 'GET',
     body: null,
   });
@@ -77,7 +72,7 @@ export const getList = async (id: number): Promise<ApiWishlist> => {
 export const createList = async (newListName: string): Promise<ApiWishlist> => {
   if (newListName.length === 0) throw new Error('List name cannot be empty');
   return makeCall({
-    endpoint: 'wishlists',
+    endpoint: '/wishlists',
     method: 'POST',
     body: { name: newListName, products: [] },
   });
@@ -85,7 +80,7 @@ export const createList = async (newListName: string): Promise<ApiWishlist> => {
 
 export const updateList = async (data: ApiWishlist): Promise<ApiWishlist> => {
   return makeCall({
-    endpoint: `wishlists/${data.id}`,
+    endpoint: `/wishlists/${data.id}`,
     method: 'PUT',
     body: data,
   });
@@ -93,7 +88,7 @@ export const updateList = async (data: ApiWishlist): Promise<ApiWishlist> => {
 
 export const deleteList = async (listId: number) => {
   return makeCall({
-    endpoint: `wishlists/${listId}`,
+    endpoint: `/wishlists/${listId}`,
     method: 'DELETE',
     body: null,
   });
