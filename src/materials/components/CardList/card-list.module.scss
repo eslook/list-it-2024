@@ -26,7 +26,6 @@
 
     @include from(600px) {
       flex-direction: row;
-      justify-content: space-between;
       flex-wrap: wrap;
       gap: 4rem;
     }
