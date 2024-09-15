@@ -14,6 +14,8 @@ import HGroup from '@/materials/basics/HGroup';
 import Title from '@/materials/basics/Title';
 import CardList from '@/materials/components/CardList/CardList';
 import Hero from '@/materials/components/Hero';
+import Content from '@/materials/basics/Content';
+import Button from '@/materials/basics/Button';
 
 interface ListsOverviewProps {
   initialLists: ApiWishlist[];
@@ -68,40 +70,55 @@ const ListsOverview: React.FC<ListsOverviewProps> = ({ initialLists }) => {
             value={newListName}
             onChange={handleInputChange}
           />
-          <button
+          <Button
             disabled={newListName.length === 0}
             onClick={handleCreateList}>
             {t('create.button')}
-          </button>
+          </Button>
         </>
       </Hero>
 
       {lists && (
         <CardList>
-          {lists.map(list => (
-            <div key={list.id}>
-              {list.name}
-              <button onClick={() => handleDeleteList(list.id)}>
-                {t('deleteList')}
-              </button>
-              <ul>
-                {list.products.map((itemId: number) => (
-                  <li key={itemId}>
-                    <Link href={`/item/${itemId}`}>{itemId}</Link>
-                    <button
-                      onClick={() =>
-                        handleRemoveItemFromList({
-                          itemId: itemId,
-                          listId: list.id,
-                        })
-                      }>
-                      {t('removeItemFromList')}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {lists
+            .slice()
+            .reverse()
+            .map(list => (
+              <div key={list.id}>
+                <HGroup>
+                  <Title size={3} element="p" value={list.name} />
+                  <Content
+                    size="small"
+                    element="p"
+                    value={t('listItems', { amount: list.products.length })}
+                  />
+                </HGroup>
+
+                <Button onClick={() => handleDeleteList(list.id)}>
+                  {t('deleteList')}
+                </Button>
+
+                <p>{t('items')}</p>
+                <ul>
+                  {list.products.map((itemId: number) => (
+                    <li key={itemId}>
+                      <Link href={`/item/${itemId}`}>
+                        {t('itemId', { itemId })}
+                      </Link>
+                      <Button
+                        onClick={() =>
+                          handleRemoveItemFromList({
+                            itemId: itemId,
+                            listId: list.id,
+                          })
+                        }>
+                        {t('removeItemFromList')}
+                      </Button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
         </CardList>
       )}
     </>

@@ -2,9 +2,8 @@
   --link-color: var(--link-default-color);
 
   display: inline-flex;
-  align-items: center;
+  // No align-items; auto based on context
   justify-content: center;
-  text-align: center;
   gap: 0.5rem;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -29,7 +28,7 @@
     line-height: 0.75;
     text-transform: uppercase;
 
-    padding: 14px 34px 16px;
+    padding: 0.875rem 2.125rem 1rem;
     border-radius: 2024px; // rounded
     border: 2px solid var(--link-button-border-color);
     color: var(--link-button-color);

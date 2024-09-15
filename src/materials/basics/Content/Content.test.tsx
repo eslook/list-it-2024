@@ -49,4 +49,11 @@ describe('Content Basic', () => {
     expect(element?.innerHTML).toBe(htmlContent);
     expect(screen.queryByText('Test Children Content')).not.toBeInTheDocument();
   });
+
+  it('renders default class and provided additional class ', () => {
+    const { container } = render(<Content className="additional-class" />);
+    const element = container.firstElementChild;
+    expect(element).toHaveClass('content');
+    expect(element).toHaveClass('additional-class');
+  });
 });

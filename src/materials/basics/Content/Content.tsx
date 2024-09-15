@@ -28,6 +28,10 @@ interface ContentProps extends React.BaseHTMLAttributes<HTMLDivElement> {
    * The content to render, passed as children.
    */
   children?: React.ReactNode;
+  /**
+   * Additional class name
+   */
+  className?: string;
 }
 
 const Content: React.FC<ContentProps> = ({
@@ -35,9 +39,11 @@ const Content: React.FC<ContentProps> = ({
   value,
   size,
   children,
+  className,
 }) => {
   const classes = [styles.content];
   if (size) classes.push(styles[`is-${size}`]);
+  if (className) classes.push(className);
   return (
     <Element
       className={classes.join(' ')}

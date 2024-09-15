@@ -84,7 +84,8 @@
         "milkFrother": "Milk Frother"
       },
       "visual": "Visual",
-      "lists": "Lists"
+      "lists": "Lists",
+      "listItems": "({amount} items)"
     },
     "lists": {
       "title": "Lists",
@@ -94,7 +95,10 @@
         "button": "Create list"
       },
       "deleteList": "Delete list",
-      "removeItemFromList": "Remove item from list"
+      "removeItemFromList": "Remove",
+      "listItems": "({amount} items)",
+      "items": "Items",
+      "itemId": "Item ID: {itemId}"
     },
     "list": {
       "title": "List"

@@ -12,6 +12,7 @@ import HGroup from '@/materials/basics/HGroup';
 import DescriptionList from '@/materials/basics/DescriptionList';
 import Hero from '@/materials/components/Hero';
 import CardList from '@/materials/components/CardList/CardList';
+import Button from '@/materials/basics/Button';
 
 interface ItemOverviewProps {
   itemPromise: Promise<ApiProduct>;
@@ -64,7 +65,7 @@ const ItemOverview: React.FC<ItemOverviewProps> = ({
         </>
         <>
           <Title element="h3" value={t('visual')} isSrOnly />
-          <Image src={item.image} alt="" width={600} height={600} />
+          <Image src={item.image} alt="" width={250} height={250} />
         </>
       </Hero>
 
@@ -72,29 +73,40 @@ const ItemOverview: React.FC<ItemOverviewProps> = ({
         <>
           <Title element="h3" value={t('lists')} isSrOnly />
           <CardList>
-            {lists.map(list => (
-              <div key={list.id}>
-                {list.name}
-                <button
-                  disabled={list.products.includes(item.id)}
-                  onClick={() =>
-                    handleAddItemToList({
-                      listId: list.id,
-                    })
-                  }>
-                  {t('addToList')}
-                </button>
-                <button
-                  disabled={!list.products.includes(item.id)}
-                  onClick={() =>
-                    handleRemoveItemFromList({
-                      listId: list.id,
-                    })
-                  }>
-                  {t('removeFromList')}
-                </button>
-              </div>
-            ))}
+            {lists
+              .slice()
+              .reverse()
+              .map(list => (
+                <div key={list.id}>
+                  <HGroup>
+                    <Title size={3} element="p" value={list.name} />
+                    <Content
+                      size="small"
+                      element="p"
+                      value={t('listItems', { amount: list.products.length })}
+                    />
+                  </HGroup>
+
+                  <Button
+                    disabled={list.products.includes(item.id)}
+                    onClick={() =>
+                      handleAddItemToList({
+                        listId: list.id,
+                      })
+                    }>
+                    {t('addToList')}
+                  </Button>
+                  <Button
+                    disabled={!list.products.includes(item.id)}
+                    onClick={() =>
+                      handleRemoveItemFromList({
+                        listId: list.id,
+                      })
+                    }>
+                    {t('removeFromList')}
+                  </Button>
+                </div>
+              ))}
           </CardList>
         </>
       )}

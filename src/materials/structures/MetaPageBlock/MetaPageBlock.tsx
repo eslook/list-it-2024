@@ -5,6 +5,7 @@ import Container from '@/materials/basics/Container';
 import HGroup from '@/materials/basics/HGroup';
 import Content from '@/materials/basics/Content';
 import Link from '@/materials/basics/Link';
+import Button from '@/materials/basics/Button';
 
 export interface MetaPageBlockProps {
   /**
@@ -43,16 +44,25 @@ const MetaPageBlock: React.FC<MetaPageBlockProps> = ({
       <Container className={styles['meta-page-block-body']}>
         <HGroup isReversed={true}>
           <Title size={1} element="h2" value={title} />
-          {code && <Content element="p" size="large" value={code} />}
+          {code && (
+            <Content
+              className={styles['meta-page-block-code']}
+              element="p"
+              size="large"
+              value={code}
+            />
+          )}
         </HGroup>
         {description && (
           <Content element="p" size="large" value={description} />
         )}
         {action &&
           (actionFunc ? (
-            <button onClick={actionFunc}>{action}</button>
+            <Button onClick={actionFunc}>{action}</Button>
           ) : (
-            <Link href="/">{action}</Link>
+            <Link variant="button" href="/">
+              {action}
+            </Link>
           ))}
       </Container>
     </div>
