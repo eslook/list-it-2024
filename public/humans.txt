@@ -1,0 +1,26 @@
+# humanstxt.org/
+
+/* TEAM */
+
+    Charlotte Gieltjes - Developer
+
+/* ASSETS */
+
+    Data
+    db.json: https://rebels.io/nl
+
+    Visuals
+    db.json: https://picsum.photos/
+    laula: https://unsplash.com/collections/xKlpqC7fE08/laula
+    favicon: https://rebels.io/nl
+
+    Copywriting
+
+    Design inspiration
+    website: https://rebels.io/nl
+
+/* THANKS */
+
+      ∧,,,∧
+    (  ̳• · • ̳)
+    /    づ♡ meow
