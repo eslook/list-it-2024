@@ -76,7 +76,7 @@ const ItemsOverview: React.FC<ItemsOverviewProps> = ({ itemsPromise }) => {
       <CardList>
         {filteredItems.map((item: any) => (
           <div key={item.id}>
-            <Image src={item.image} alt="" width={600} height={600} />
+            <Image src={item.image} alt="" width={250} height={250} />
             <Link key={item.id} href={`/item/${item.id}`}>
               {item.name}
             </Link>

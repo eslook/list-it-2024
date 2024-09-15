@@ -64,7 +64,7 @@ const ItemOverview: React.FC<ItemOverviewProps> = ({
         </>
         <>
           <Title element="h3" value={t('visual')} isSrOnly />
-          <Image src={item.image} alt="" width={600} height={600} />
+          <Image src={item.image} alt="" width={250} height={250} />
         </>
       </Hero>
 
