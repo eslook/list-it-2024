@@ -1,0 +1,28 @@
+@import '@/styles/shared/_shared.scss';
+
+.meta-page-block {
+  --meta-page-block-background-color: var(
+    --meta-page-block-default-background-color
+  );
+  --meta-page-block-color: var(--meta-page-block-default-color);
+
+  flex-grow: 1;
+  width: 100%;
+
+  color: var(--meta-page-block-color);
+  @include brand-background(var(--meta-page-block-background-color));
+
+  .meta-page-block-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    padding-block: 3.125rem;
+    @include from(900px) {
+      gap: 2rem;
+      padding-block: 6.25rem 9.375rem;
+    }
+  }
+}
