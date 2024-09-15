@@ -1,3 +1,10 @@
+## [1.12.2](https://github.com/eslook/list-it-2024/compare/v1.12.1...v1.12.2) (2024-09-15)
+
+
+### Bug Fixes
+
+* make API_HOST public ([d583248](https://github.com/eslook/list-it-2024/commit/d5832488589ba3c30676bc9ed39b842d6331433c))
+
 ## [1.12.1](https://github.com/eslook/list-it-2024/compare/v1.12.0...v1.12.1) (2024-09-15)
 
 
