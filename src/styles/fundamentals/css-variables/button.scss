@@ -1,0 +1,14 @@
+:root {
+  --button-default-border-color: #{$black};
+  --button-default-background-color: #{$white};
+  --button-default-color: #{$black};
+  --button-interaction-border-color: #{$black};
+  --button-interaction-background-color: #{$black};
+  --button-interaction-color: #{$white};
+  --button-active-border-color: #{$brand-color};
+  --button-active-background-color: #{$white};
+  --button-active-color: #{$brand-color};
+  --button-disabled-border-color: #{$muted-color};
+  --button-disabled-background-color: #{$white};
+  --button-disabled-color: #{$muted-color};
+}

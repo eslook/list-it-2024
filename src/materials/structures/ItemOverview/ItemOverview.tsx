@@ -12,6 +12,7 @@ import HGroup from '@/materials/basics/HGroup';
 import DescriptionList from '@/materials/basics/DescriptionList';
 import Hero from '@/materials/components/Hero';
 import CardList from '@/materials/components/CardList/CardList';
+import Button from '@/materials/basics/Button';
 
 interface ItemOverviewProps {
   itemPromise: Promise<ApiProduct>;
@@ -81,7 +82,7 @@ const ItemOverview: React.FC<ItemOverviewProps> = ({
                   value={t('listItems', { amount: list.products.length })}
                 />
 
-                <button
+                <Button
                   disabled={list.products.includes(item.id)}
                   onClick={() =>
                     handleAddItemToList({
@@ -89,8 +90,8 @@ const ItemOverview: React.FC<ItemOverviewProps> = ({
                     })
                   }>
                   {t('addToList')}
-                </button>
-                <button
+                </Button>
+                <Button
                   disabled={!list.products.includes(item.id)}
                   onClick={() =>
                     handleRemoveItemFromList({
@@ -98,7 +99,7 @@ const ItemOverview: React.FC<ItemOverviewProps> = ({
                     })
                   }>
                   {t('removeFromList')}
-                </button>
+                </Button>
               </div>
             ))}
           </CardList>

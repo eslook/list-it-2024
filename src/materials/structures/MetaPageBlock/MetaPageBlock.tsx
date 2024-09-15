@@ -5,6 +5,7 @@ import Container from '@/materials/basics/Container';
 import HGroup from '@/materials/basics/HGroup';
 import Content from '@/materials/basics/Content';
 import Link from '@/materials/basics/Link';
+import Button from '@/materials/basics/Button';
 
 export interface MetaPageBlockProps {
   /**
@@ -57,9 +58,11 @@ const MetaPageBlock: React.FC<MetaPageBlockProps> = ({
         )}
         {action &&
           (actionFunc ? (
-            <button onClick={actionFunc}>{action}</button>
+            <Button onClick={actionFunc}>{action}</Button>
           ) : (
-            <Link href="/">{action}</Link>
+            <Link variant="button" href="/">
+              {action}
+            </Link>
           ))}
       </Container>
     </div>

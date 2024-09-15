@@ -15,6 +15,7 @@ import Title from '@/materials/basics/Title';
 import CardList from '@/materials/components/CardList/CardList';
 import Hero from '@/materials/components/Hero';
 import Content from '@/materials/basics/Content';
+import Button from '@/materials/basics/Button';
 
 interface ListsOverviewProps {
   initialLists: ApiWishlist[];
@@ -69,11 +70,11 @@ const ListsOverview: React.FC<ListsOverviewProps> = ({ initialLists }) => {
             value={newListName}
             onChange={handleInputChange}
           />
-          <button
+          <Button
             disabled={newListName.length === 0}
             onClick={handleCreateList}>
             {t('create.button')}
-          </button>
+          </Button>
         </>
       </Hero>
 
@@ -88,14 +89,15 @@ const ListsOverview: React.FC<ListsOverviewProps> = ({ initialLists }) => {
                 value={t('listItems', { amount: list.products.length })}
               />
 
-              <button onClick={() => handleDeleteList(list.id)}>
+              <Button onClick={() => handleDeleteList(list.id)}>
                 {t('deleteList')}
-              </button>
+              </Button>
+
               <ul>
                 {list.products.map((itemId: number) => (
                   <li key={itemId}>
                     <Link href={`/item/${itemId}`}>{itemId}</Link>
-                    <button
+                    <Button
                       onClick={() =>
                         handleRemoveItemFromList({
                           itemId: itemId,
@@ -103,7 +105,7 @@ const ListsOverview: React.FC<ListsOverviewProps> = ({ initialLists }) => {
                         })
                       }>
                       {t('removeItemFromList')}
-                    </button>
+                    </Button>
                   </li>
                 ))}
               </ul>
