@@ -81,7 +81,6 @@ The following features are on the roadmap:
 - design for cards
 - caching fetched items
 - show full item info in lists
-- style the loading page
 - style the inputs
 - if item does not exist, don't show error page, show notfound (serverside and clientside)
 - add structures that require promise props to storybook

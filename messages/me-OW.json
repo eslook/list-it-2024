@@ -7,6 +7,9 @@
   "skipLink": {
     "content": "Skip to main content"
   },
+  "loading": {
+    "title": "Meowning..."
+  },
   "header": {
     "title": "Lisssst it: mewtems, lissssts, we got meow'm.",
     "logoAlt": "Logo",
@@ -60,7 +63,7 @@
       "action": "Take me to the Cat Den"
     },
     "error": {
-      "title": "An error occurred",
+      "title": "Hiss",
       "description": "Something went wrong",
       "tryAgain": "Try again"
     },
