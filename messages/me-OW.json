@@ -94,9 +94,11 @@
         "placeholder": "New lisssst",
         "button": "Create lisssst"
       },
-      "deleteList": "De-claw lisssst",
-      "removeItemFromList": "Remove mewtem from lisssst",
-      "listItems": "({amount} mewtems)"
+      "deleteList": "Kill",
+      "removeItemFromList": "Scratch",
+      "listItems": "({amount} mewtems)",
+      "items": "Mewtems",
+      "itemId": "Mewtem ID: {itemId}"
     },
     "list": {
       "title": "Lisssst"

@@ -9,10 +9,14 @@ jest.mock('react', () => ({
   ...jest.requireActual('react'),
   use: jest.fn(),
 }));
+// Explicit check for the translation key and options
+const translation = (key: string, options?: object) =>
+  `${key}-${JSON.stringify(options)}`;
 // Mock the next-intl useTranslations function for the translations
 jest.mock('next-intl', () => ({
   ...jest.requireActual('next-intl'),
-  useTranslations: () => (key: string) => key, // return flat key for testing
+  useTranslations: () => (key: string, options: object) =>
+    translation(key, options),
 }));
 // Mock the api functions
 jest.mock('@/utils/api', () => ({
@@ -56,7 +60,7 @@ describe('ListsOverview Structure', () => {
     renderListsOverview();
     const list = screen.getByText(mockListToModify.name).closest('li');
     if (!list) throw new Error('List not found');
-    const deleteButton = within(list).getByText('deleteList');
+    const deleteButton = within(list).getByText(translation('deleteList'));
     fireEvent.click(deleteButton);
     await waitFor(() => {
       expect(deleteList).toHaveBeenCalledWith(mockListToModify.id);
@@ -70,12 +74,14 @@ describe('ListsOverview Structure', () => {
     const list = screen.getByText(mockListToModify.name).closest('li');
     if (!list) throw new Error('List not found');
     const listItem = within(list)
-      .getByText(mockItemIdToRemove.toString())
+      .getByText(translation('itemId', { itemId: mockItemIdToRemove }))
       .closest('li');
     if (listItem === null) {
       throw new Error('List item not found');
     }
-    const addButton = within(listItem).getByText('removeItemFromList');
+    const addButton = within(listItem).getByText(
+      translation('removeItemFromList')
+    );
     fireEvent.click(addButton);
     await waitFor(() => {
       expect(removeItemFromList).toHaveBeenCalledWith({

@@ -75,12 +75,14 @@ const ItemOverview: React.FC<ItemOverviewProps> = ({
           <CardList>
             {lists.map(list => (
               <div key={list.id}>
-                <Title size={3} element="p" value={list.name} />
-                <Content
-                  size="small"
-                  element="p"
-                  value={t('listItems', { amount: list.products.length })}
-                />
+                <HGroup>
+                  <Title size={3} element="p" value={list.name} />
+                  <Content
+                    size="small"
+                    element="p"
+                    value={t('listItems', { amount: list.products.length })}
+                  />
+                </HGroup>
 
                 <Button
                   disabled={list.products.includes(item.id)}

@@ -82,21 +82,26 @@ const ListsOverview: React.FC<ListsOverviewProps> = ({ initialLists }) => {
         <CardList>
           {lists.map(list => (
             <div key={list.id}>
-              <Title size={3} element="p" value={list.name} />
-              <Content
-                size="small"
-                element="p"
-                value={t('listItems', { amount: list.products.length })}
-              />
+              <HGroup>
+                <Title size={3} element="p" value={list.name} />
+                <Content
+                  size="small"
+                  element="p"
+                  value={t('listItems', { amount: list.products.length })}
+                />
+              </HGroup>
 
               <Button onClick={() => handleDeleteList(list.id)}>
                 {t('deleteList')}
               </Button>
 
+              <p>{t('items')}</p>
               <ul>
                 {list.products.map((itemId: number) => (
                   <li key={itemId}>
-                    <Link href={`/item/${itemId}`}>{itemId}</Link>
+                    <Link href={`/item/${itemId}`}>
+                      {t('itemId', { itemId })}
+                    </Link>
                     <Button
                       onClick={() =>
                         handleRemoveItemFromList({

@@ -95,8 +95,10 @@
         "button": "Create list"
       },
       "deleteList": "Delete list",
-      "removeItemFromList": "Remove item from list",
-      "listItems": "({amount} items)"
+      "removeItemFromList": "Remove",
+      "listItems": "({amount} items)",
+      "items": "Items",
+      "itemId": "Item ID: {itemId}"
     },
     "list": {
       "title": "List"
