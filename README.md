@@ -37,6 +37,30 @@ Deploy the `api` to Vercel using the Framework Preset for`Other`, set `Root Dire
 
 See [Vercel](https://vercel.com/docs/deployments/overview) for the latest documentation.
 
+## Known issues
+
+The following are known issues: warnings or errors.
+
+### "Warning: React does not recognize the `fetchPriority` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `fetchpriority` instead. If you accidentally passed it from a parent component, remove it from the DOM element."
+
+Reproduce by installing modules and running tests.
+
+```bash
+npm i
+npm run test
+```
+
+The warning refers to test-utils `) => render(ui, { wrapper: ProviderWrapper, ...options });`.
+The warning only started occurring since the inclusion of `ItemOverview.test.tsx`.
+The warning can be found online in several GitHub issues. The issue seems to be occurring throughout the next versions.
+
+Considering the above, and:
+
+- this is a warning rather than an error
+- this does not actually affect the result of tests, application, api or storybook
+
+we've decided not to fix this warning at this time.
+
 ## Changelog
 
 See the `CHANGELOG.md` in the root of the project for changes between automated releases of the package.

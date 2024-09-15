@@ -18,6 +18,7 @@
       }
     ],
     "paths": {
+      "db": ["./api/db.json"],
       "@/*": ["./src/*"],
       "test-utils": ["./test-utils"]
     }

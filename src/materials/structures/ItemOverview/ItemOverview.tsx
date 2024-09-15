@@ -1,6 +1,6 @@
 'use client';
 
-import { use, useCallback, useState } from 'react';
+import React, { use, useCallback, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { getLists, addItemToList, removeItemFromList } from '@/utils/api';
 import Image from '@/materials/basics/Image';
@@ -54,10 +54,12 @@ const ItemOverview: React.FC<ItemOverviewProps> = ({
           </Link>
         </>
         <>
-          <Title element="h3" value={t('specifications')} isSrOnly />
+          <Title element="h3" value={t('specifications.title')} isSrOnly />
           <DescriptionList
             items={Object.entries(item.specifications).map(([key, value]) => ({
-              key,
+              key: t(
+                `specifications.${key as keyof typeof item.specifications}`
+              ),
               value,
             }))}
           />

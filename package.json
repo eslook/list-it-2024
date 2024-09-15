@@ -80,6 +80,7 @@
     "moduleNameMapper": {
       "^test-utils": "<rootDir>/test-utils.tsx",
       "^next/font/google$": "<rootDir>/__mocks__/mockNextFontGoogle.ts",
+      "^db$": "<rootDir>/api/db.json",
       "^@/(.*)$": "<rootDir>/src/$1",
       "\\.(css|scss)$": "identity-obj-proxy"
     }
