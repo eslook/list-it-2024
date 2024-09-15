@@ -104,6 +104,9 @@ The following features are on the roadmap:
 
 - design for cards
 - caching fetched items
+- delay the success of calls after actions like delete, and show a loader in the button while delayed
+- show errors in toasts instead of redirecting to error page
+- expand storybook with actions for the api calls in the overview structures
 - show full item info in lists
 - style the inputs
 - if item does not exist, don't show error page, show notfound (serverside and clientside)

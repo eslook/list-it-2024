@@ -69,7 +69,7 @@ export const getList = async (id: number): Promise<ApiWishlist> => {
   });
 };
 
-export const createList = async (newListName: string): Promise<ApiWishlist> => {
+export const createList = async (newListName: string): Promise<void> => {
   if (newListName.length === 0) throw new Error('List name cannot be empty');
   return makeCall({
     endpoint: '/wishlists',
@@ -78,7 +78,7 @@ export const createList = async (newListName: string): Promise<ApiWishlist> => {
   });
 };
 
-export const updateList = async (data: ApiWishlist): Promise<ApiWishlist> => {
+export const updateList = async (data: ApiWishlist): Promise<void> => {
   return makeCall({
     endpoint: `/wishlists/${data.id}`,
     method: 'PUT',
@@ -102,7 +102,7 @@ export const addItemToList = async ({
   listId: number;
 }) => {
   const list = await getList(listId);
-  list.products = [...list.products, itemId];
+  if (!list.products.includes(itemId)) list.products.push(itemId);
   return updateList(list);
 };
 
