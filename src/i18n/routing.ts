@@ -32,3 +32,10 @@ export const getDirection = (locale: string) => {
 // that will consider the routing configuration
 export const { Link, redirect, usePathname, useRouter } =
   createSharedPathnamesNavigation(routing);
+
+// While next/link exposes its own LinkProps type,
+// next-intl does not. So we define our own here, limited to what we need.
+export interface LinkProps {
+  href: string;
+  locale?: 'en-US' | 'me-OW';
+}

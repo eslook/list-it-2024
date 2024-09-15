@@ -1,8 +1,28 @@
 .link {
+  --link-color: var(--link-default-color);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
   text-decoration: none;
+  transition: color 0.3s ease;
+
+  color: var(--link-color);
+
+  &.is-inactive {
+    --link-default-color: var(--link-inactive-color);
+  }
+
   &:hover,
   &:active,
+  &:focus-visible,
+  &.is-active {
+    --link-default-color: var(--link-interaction-color);
+  }
+
   &:focus {
-    text-decoration-style: underline;
+    // No focus style: has focus-ring for focus-within
   }
 }
