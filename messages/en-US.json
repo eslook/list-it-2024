@@ -33,7 +33,10 @@
       "search": {
         "label": "Search items",
         "placeholder": "Enter a keyword..."
-      }
+      },
+      "allItems": "Showing {amount} items",
+      "noResults": "No items found for {keyword}",
+      "results": "Found {amount} items for {keyword}"
     },
     "item": {
       "title": "Item",
