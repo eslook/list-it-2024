@@ -80,42 +80,45 @@ const ListsOverview: React.FC<ListsOverviewProps> = ({ initialLists }) => {
 
       {lists && (
         <CardList>
-          {lists.map(list => (
-            <div key={list.id}>
-              <HGroup>
-                <Title size={3} element="p" value={list.name} />
-                <Content
-                  size="small"
-                  element="p"
-                  value={t('listItems', { amount: list.products.length })}
-                />
-              </HGroup>
+          {lists
+            .slice()
+            .reverse()
+            .map(list => (
+              <div key={list.id}>
+                <HGroup>
+                  <Title size={3} element="p" value={list.name} />
+                  <Content
+                    size="small"
+                    element="p"
+                    value={t('listItems', { amount: list.products.length })}
+                  />
+                </HGroup>
 
-              <Button onClick={() => handleDeleteList(list.id)}>
-                {t('deleteList')}
-              </Button>
+                <Button onClick={() => handleDeleteList(list.id)}>
+                  {t('deleteList')}
+                </Button>
 
-              <p>{t('items')}</p>
-              <ul>
-                {list.products.map((itemId: number) => (
-                  <li key={itemId}>
-                    <Link href={`/item/${itemId}`}>
-                      {t('itemId', { itemId })}
-                    </Link>
-                    <Button
-                      onClick={() =>
-                        handleRemoveItemFromList({
-                          itemId: itemId,
-                          listId: list.id,
-                        })
-                      }>
-                      {t('removeItemFromList')}
-                    </Button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+                <p>{t('items')}</p>
+                <ul>
+                  {list.products.map((itemId: number) => (
+                    <li key={itemId}>
+                      <Link href={`/item/${itemId}`}>
+                        {t('itemId', { itemId })}
+                      </Link>
+                      <Button
+                        onClick={() =>
+                          handleRemoveItemFromList({
+                            itemId: itemId,
+                            listId: list.id,
+                          })
+                        }>
+                        {t('removeItemFromList')}
+                      </Button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
         </CardList>
       )}
     </>
