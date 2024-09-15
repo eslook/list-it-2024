@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     list-style: none;
-    gap: 1rem;
+    gap: 2rem;
     padding-inline-start: 0;
 
     @include from(600px) {
@@ -36,13 +36,23 @@
       color: var(--card-list-card-color);
       background-color: var(--card-list-card-background-color);
       padding: 0 1rem 1rem;
+      &:not(:has(img)) {
+        padding-block-start: 1rem;
+      }
       @include from(600px) {
         flex: 0 0 250px;
       }
       > div {
+        &:has(img) {
+          margin-top: -1rem;
+          @include until(600px) {
+            align-items: center;
+          }
+        }
+
         display: flex;
-        flex-direction: column;
         align-items: flex-start;
+        flex-direction: column;
         gap: 0.5rem;
       }
     }
