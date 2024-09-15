@@ -37,13 +37,23 @@ describe('Link Basic', () => {
     expect(link).toHaveAttribute('title', 'Read more about cats in the wild');
   });
 
-  it('renders is-inactive class when isInactive is true', () => {
+  it('renders is-inactive class when variant is inactive', () => {
     render(
-      <Link href="/" isInactive>
+      <Link href="/" variant="inactive">
         Link
       </Link>
     );
     const link = document.querySelector('.link');
     expect(link).toHaveClass('is-inactive');
+  });
+
+  it('renders is-button class when variant is button', () => {
+    render(
+      <Link href="/" variant="button">
+        Link
+      </Link>
+    );
+    const link = document.querySelector('.link');
+    expect(link).toHaveClass('is-button');
   });
 });

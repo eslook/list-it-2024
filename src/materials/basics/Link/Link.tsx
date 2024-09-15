@@ -13,9 +13,10 @@ interface LinkProps extends NextLinkProps {
    */
   href: string;
   /**
-   * Whether the link is styled as inactive
+   * Style of the link, either 'inactive' or 'button'
+   * or neither for default
    */
-  isInactive?: boolean;
+  variant?: 'inactive' | 'button';
   /**
    * The content of the link
    */
@@ -29,7 +30,7 @@ interface LinkProps extends NextLinkProps {
 const Link: React.FC<LinkProps> = ({
   title,
   href,
-  isInactive,
+  variant,
   children,
   className,
   /**
@@ -38,7 +39,7 @@ const Link: React.FC<LinkProps> = ({
   ...props
 }) => {
   const classes = [styles.link];
-  if (isInactive) classes.push(styles['is-inactive']);
+  if (variant) classes.push(styles[`is-${variant}`]);
   if (className) classes.push(className);
   return (
     <NextLink

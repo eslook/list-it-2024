@@ -2,4 +2,12 @@
   --link-default-color: inherit;
   --link-inactive-color: #{$muted-color};
   --link-interaction-color: #{$brand-color};
+
+  --link-button-default-color: #{$brand-color};
+  --link-button-default-background-color: transparent;
+  --link-button-default-border-color: #{$brand-color};
+
+  --link-button-interaction-color: #{$white};
+  --link-button-interaction-background-color: #{$brand-color};
+  --link-button-interaction-border-color: #{$brand-color};
 }

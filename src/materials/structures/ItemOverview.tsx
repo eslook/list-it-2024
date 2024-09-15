@@ -44,12 +44,14 @@ const ItemOverview: React.FC<ItemOverviewProps> = ({
     <>
       <Hero>
         <>
-          <Link href="/">Go back</Link>
           <HGroup isReversed={true}>
             <Title size={1} element="h2" value={item.name} />
             <Content element="p" size="medium" value={item.category} />
           </HGroup>
           <Content element="p" value={t('brand', { brand: item.brand })} />
+          <Link href="/" variant="button">
+            Go back
+          </Link>
         </>
         <>
           <Title element="h3" value={t('specifications')} isSrOnly />
