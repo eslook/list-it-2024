@@ -20,6 +20,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'meta' });
 
   return {
+    // metadataBase (canonical) set automatically by Vercel
     title: t('title'),
     description: t('description'),
     authors: { name: '/humans.txt' },
