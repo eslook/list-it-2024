@@ -5,7 +5,7 @@
       "name": "High-Performance Laptop",
       "brand": "TechTron",
       "category": "Electronics",
-      "image": "https://picsum.photos/600/600",
+      "image": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?q=80&auto=format&fit=crop&height=600&width=600",
       "specifications": {
         "processor": "Intel i7",
         "ram": "16GB",
@@ -17,7 +17,7 @@
       "name": "Gaming Mouse",
       "brand": "GamerGadgets",
       "category": "Accessories",
-      "image": "https://picsum.photos/600/600",
+      "image": "https://images.unsplash.com/photo-1628832307345-7404b47f1751?q=80&auto=format&fit=crop&height=600&width=600",
       "specifications": {
         "dpi": "12000",
         "buttons": "8",
@@ -29,7 +29,7 @@
       "name": "Bluetooth Headphones",
       "brand": "SoundWave",
       "category": "Audio",
-      "image": "https://picsum.photos/600/600",
+      "image": "https://images.unsplash.com/photo-1631281637549-fb740447b4ee?q=80&auto=format&fit=crop&height=600&width=600",
       "specifications": {
         "batteryLife": "20 hours",
         "noiseCancelling": "Yes",
@@ -41,7 +41,7 @@
       "name": "4K Monitor",
       "brand": "DisplayPro",
       "category": "Electronics",
-      "image": "https://picsum.photos/600/600",
+      "image": "https://images.unsplash.com/photo-1711540846697-56b9f66d17f1?q=80&auto=format&fit=crop&height=600&width=600",
       "specifications": {
         "resolution": "3840x2160",
         "refreshRate": "60Hz",
@@ -53,7 +53,7 @@
       "name": "Gaming Keyboard",
       "brand": "GamerGadgets",
       "category": "Accessories",
-      "image": "https://picsum.photos/600/600",
+      "image": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?q=80&auto=format&fit=crop&height=600&width=600",
       "specifications": {
         "keys": "Mechanical",
         "backlight": "RGB",
@@ -65,7 +65,7 @@
       "name": "Wireless Speaker",
       "brand": "SoundWave",
       "category": "Audio",
-      "image": "https://picsum.photos/600/600",
+      "image": "https://images.unsplash.com/photo-1726127080729-31f1631faae2?q=80&auto=format&fit=crop&height=600&width=600",
       "specifications": {
         "batteryLife": "15 hours",
         "output": "20W",
@@ -77,7 +77,7 @@
       "name": "Smartwatch",
       "brand": "TechTron",
       "category": "Wearables",
-      "image": "https://picsum.photos/600/600",
+      "image": "https://images.unsplash.com/photo-1517502474097-f9b30659dadb?q=80&auto=format&fit=crop&height=600&width=600",
       "specifications": {
         "display": "AMOLED",
         "batteryLife": "24 hours",
@@ -89,7 +89,7 @@
       "name": "Tablet",
       "brand": "TechTron",
       "category": "Electronics",
-      "image": "https://picsum.photos/600/600",
+      "image": "https://images.unsplash.com/photo-1640622841908-3a691b7b7ac9?q=80&auto=format&fit=crop&height=600&width=600",
       "specifications": {
         "display": "10 inch",
         "storage": "128GB",
@@ -101,7 +101,7 @@
       "name": "USB Microphone",
       "brand": "SoundWave",
       "category": "Audio",
-      "image": "https://picsum.photos/600/600",
+      "image": "https://images.unsplash.com/photo-1659083726524-9a341327fd99?q=80&auto=format&fit=crop&height=600&width=600",
       "specifications": {
         "frequencyResponse": "20Hz-20kHz",
         "connectivity": "USB",
@@ -113,7 +113,7 @@
       "name": "External Hard Drive",
       "brand": "StoragePlus",
       "category": "Accessories",
-      "image": "https://picsum.photos/600/600",
+      "image": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?q=80&auto=format&fit=crop&height=600&width=600",
       "specifications": {
         "capacity": "1TB",
         "connectivity": "USB 3.0",
@@ -125,7 +125,7 @@
       "name": "Ergonomic Chair",
       "brand": "ComfortSeating",
       "category": "Furniture",
-      "image": "https://picsum.photos/600/600",
+      "image": "https://images.unsplash.com/photo-1688578735352-9a6f2ac3b70a?q=80&auto=format&fit=crop&height=600&width=600",
       "specifications": {
         "material": "Mesh",
         "maxWeight": "300 lbs",
@@ -137,7 +137,7 @@
       "name": "Desk Lamp",
       "brand": "BrightLight",
       "category": "Lighting",
-      "image": "https://picsum.photos/600/600",
+      "image": "https://images.unsplash.com/photo-1508705854614-be8c5cfdf17e?q=80&auto=format&fit=crop&height=600&width=600",
       "specifications": {
         "brightness": "800 lumens",
         "colorTemperature": "3000K",
@@ -147,9 +147,9 @@
     {
       "id": 13,
       "name": "Wireless Charger",
-      "brand": "ChargePro",
+      "brand": "WoodMood",
       "category": "Accessories",
-      "image": "https://picsum.photos/600/600",
+      "image": "https://images.unsplash.com/photo-1677870372644-9e0e61acd123?q=80&auto=format&fit=crop&height=600&width=600",
       "specifications": {
         "input": "USB-C",
         "output": "15W",
@@ -161,7 +161,7 @@
       "name": "Fitness Tracker",
       "brand": "HealthFirst",
       "category": "Wearables",
-      "image": "https://picsum.photos/600/600",
+      "image": "https://images.unsplash.com/flagged/photo-1558187111-b7fa51959a06?q=80&auto=format&fit=crop&height=600&width=600",
       "specifications": {
         "batteryLife": "7 days",
         "sensors": "Heart Rate, GPS",
@@ -173,7 +173,7 @@
       "name": "Portable Projector",
       "brand": "CinemaTech",
       "category": "Electronics",
-      "image": "https://picsum.photos/600/600",
+      "image": "https://images.unsplash.com/photo-1589113050289-1c654e7e305d?q=80&auto=format&fit=crop&height=600&width=600",
       "specifications": {
         "resolution": "1080p",
         "brightness": "3000 lumens",
@@ -185,7 +185,7 @@
       "name": "Action Camera",
       "brand": "AdventureCam",
       "category": "Photography",
-      "image": "https://picsum.photos/600/600",
+      "image": "https://images.unsplash.com/photo-1677172954692-90cf8bdc91e6?q=80&auto=format&fit=crop&height=600&width=600",
       "specifications": {
         "resolution": "4K",
         "frameRate": "60 fps",
@@ -197,7 +197,7 @@
       "name": "Digital Drawing Tablet",
       "brand": "ArtistryTech",
       "category": "Accessories",
-      "image": "https://picsum.photos/600/600",
+      "image": "https://images.unsplash.com/photo-1599009433234-8d350e1e0942?q=80&auto=format&fit=crop&height=600&width=600",
       "specifications": {
         "activeArea": "10x6 inches",
         "pressureLevels": "8192",
@@ -209,7 +209,7 @@
       "name": "3D Printer",
       "brand": "PrintTech",
       "category": "Electronics",
-      "image": "https://picsum.photos/600/600",
+      "image": "https://images.unsplash.com/photo-1705475025559-ad8efdedc74f?q=80&auto=format&fit=crop&height=600&width=600",
       "specifications": {
         "printVolume": "220x220x250mm",
         "layerResolution": "0.1mm",
@@ -221,7 +221,7 @@
       "name": "Robot Vacuum",
       "brand": "CleanBot",
       "category": "Home Appliances",
-      "image": "https://picsum.photos/600/600",
+      "image": "https://images.unsplash.com/photo-1647940990395-967898eb0d65?q=80&auto=format&fit=crop&height=600&width=600",
       "specifications": {
         "batteryLife": "150 minutes",
         "suctionPower": "2000Pa",
@@ -233,7 +233,7 @@
       "name": "Espresso Machine",
       "brand": "CoffeePro",
       "category": "Kitchen Appliances",
-      "image": "https://picsum.photos/600/600",
+      "image": "https://images.unsplash.com/photo-1616191540374-dbea0eda0bfc?q=80&auto=format&fit=crop&height=600&width=600",
       "specifications": {
         "capacity": "2 cups",
         "pressure": "15 bar",
