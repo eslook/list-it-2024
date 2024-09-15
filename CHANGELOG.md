@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/eslook/list-it-2024/compare/v1.11.0...v1.12.0) (2024-09-15)
+
+
+### Features
+
+* render message on items overview for context of list ([cfb08c0](https://github.com/eslook/list-it-2024/commit/cfb08c056d1b1a227ef8be8f77dc9e82f2844e0b))
+
 # [1.11.0](https://github.com/eslook/list-it-2024/compare/v1.10.0...v1.11.0) (2024-09-15)
 
 
