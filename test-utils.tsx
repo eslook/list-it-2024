@@ -12,6 +12,8 @@ const ProviderWrapper = ({ children }: { children: React.ReactNode }) => (
   </NextIntlClientProvider>
 );
 
+// WARNING: The following warning may occur on this line and is a known bug occuring throughout the React version updates:
+// "Warning: React does not recognize the `fetchPriority` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `fetchpriority` instead. If you accidentally passed it from a parent component, remove it from the DOM element."
 const customRender = (
   ui: React.ReactElement,
   options?: Omit<RenderOptions, 'wrapper'>

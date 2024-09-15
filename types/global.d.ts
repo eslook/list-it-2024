@@ -23,15 +23,53 @@ type Messages = typeof messages;
     }
   },
  */
+type ProductSpecifications = {
+  processor?: string;
+  ram?: string;
+  storage?: string;
+  dpi?: string;
+  buttons?: string;
+  lighting?: string;
+  batteryLife?: string;
+  noiseCancelling?: string;
+  connectivity?: string;
+  resolution?: string;
+  refreshRate?: string;
+  panelType?: string;
+  keys?: string;
+  backlight?: string;
+  output?: string;
+  display?: string;
+  frequencyResponse?: string;
+  polarPattern?: string;
+  capacity?: string;
+  type?: string;
+  material?: string;
+  maxWeight?: string;
+  adjustableHeight?: string;
+  brightness?: string;
+  colorTemperature?: string;
+  input?: string;
+  compatibility?: string;
+  sensors?: string;
+  waterResistance?: string;
+  frameRate?: string;
+  activeArea?: string;
+  pressureLevels?: string;
+  printVolume?: string;
+  layerResolution?: string;
+  suctionPower?: string;
+  pressure?: string;
+  milkFrother?: string;
+};
+
 type Product = {
   id: number;
   name: string;
   brand: string;
   category: string;
   image: string;
-  specifications: {
-    [key: string]: string;
-  };
+  specifications: ProductSpecifications;
 };
 
 /**

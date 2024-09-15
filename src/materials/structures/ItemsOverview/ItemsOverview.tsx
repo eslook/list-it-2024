@@ -1,6 +1,6 @@
 'use client';
 
-import { use, useCallback, useMemo, useState } from 'react';
+import React, { use, useCallback, useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { debounce } from '@/utils/debounce';
 import Link from '@/materials/basics/Link';
