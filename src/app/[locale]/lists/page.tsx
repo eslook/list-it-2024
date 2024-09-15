@@ -1,6 +1,6 @@
 import React from 'react';
 import { unstable_setRequestLocale, getTranslations } from 'next-intl/server';
-import { ListsOverview } from '@/materials/structures/ListsOverview';
+import ListsOverview from '@/materials/structures/ListsOverview';
 import { getLists } from '@/utils/api';
 import { Metadata, ResolvingMetadata } from 'next';
 

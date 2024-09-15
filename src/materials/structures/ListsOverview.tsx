@@ -3,13 +3,17 @@
 import { useState } from 'react';
 import useSWR from 'swr';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
+import Link from '@/materials/basics/Link';
 import {
   getLists,
   createList,
   deleteList,
   removeItemFromList,
 } from '@/utils/api';
+import HGroup from '@/materials/basics/HGroup';
+import Title from '@/materials/basics/Title';
+import CardList from '@/materials/components/CardList/CardList';
+import Hero from '@/materials/components/Hero';
 
 interface ListsOverviewProps {
   initialLists: ApiWishlist[];
@@ -51,24 +55,31 @@ const ListsOverview: React.FC<ListsOverviewProps> = ({ initialLists }) => {
 
   return (
     <>
-      <h1>{t('title')}</h1>
-
-      <label htmlFor="create">{t('create.label')}</label>
-      <input
-        id="create"
-        type="text"
-        placeholder={t('create.placeholder')}
-        value={newListName}
-        onChange={handleInputChange}
-      />
-      <button disabled={newListName.length === 0} onClick={handleCreateList}>
-        {t('create.button')}
-      </button>
+      <Hero>
+        <>
+          <HGroup isReversed={true}>
+            <Title size={1} element="h2" value={t('title')} />
+          </HGroup>
+          <label htmlFor="create">{t('create.label')}</label>
+          <input
+            id="create"
+            type="text"
+            placeholder={t('create.placeholder')}
+            value={newListName}
+            onChange={handleInputChange}
+          />
+          <button
+            disabled={newListName.length === 0}
+            onClick={handleCreateList}>
+            {t('create.button')}
+          </button>
+        </>
+      </Hero>
 
       {lists && (
-        <ul>
+        <CardList>
           {lists.map(list => (
-            <li key={list.id}>
+            <div key={list.id}>
               {list.name}
               <button onClick={() => handleDeleteList(list.id)}>
                 {t('deleteList')}
@@ -89,12 +100,12 @@ const ListsOverview: React.FC<ListsOverviewProps> = ({ initialLists }) => {
                   </li>
                 ))}
               </ul>
-            </li>
+            </div>
           ))}
-        </ul>
+        </CardList>
       )}
     </>
   );
 };
 
-export { ListsOverview };
+export default ListsOverview;
